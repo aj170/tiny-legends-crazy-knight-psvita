@@ -9,8 +9,12 @@ public class Utils
 
 	static Utils()
 	{
-		string persistentDataPath = Application.persistentDataPath;
-		persistentDataPath += "/../Documents";
+#if UNITY_PSP2 && !UNITY_EDITOR
+		string persistentDataPath = "ux0:data/CrazyKnight";
+#else
+        string persistentDataPath = Application.persistentDataPath;
+#endif
+		//persistentDataPath += "/../Documents";
 		if (!Directory.Exists(persistentDataPath))
 		{
 			Directory.CreateDirectory(persistentDataPath);

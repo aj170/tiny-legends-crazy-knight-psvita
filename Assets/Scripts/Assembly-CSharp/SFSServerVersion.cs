@@ -123,6 +123,8 @@ public class SFSServerVersion : MonoBehaviour
 		{
 #if UNITY_STANDALONE && !UNITY_EDITOR
 			string path = Application.dataPath + "/../online-config.txt";
+#elif UNITY_PSP2 && !UNITY_EDITOR
+			string path = "ux0:data/CrazyKnight/online-config.txt";
 #else
             string path = Path.Combine(Application.persistentDataPath, "online-config.txt");
 #endif

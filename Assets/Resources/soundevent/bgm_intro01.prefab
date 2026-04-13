@@ -2,39 +2,39 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!1001 &100100000
 Prefab:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1543126921048003}
+  m_RootGameObject: {fileID: 1867697172921004}
   m_IsPrefabParent: 1
---- !u!1 &1543126921048003
+--- !u!1 &1867697172921004
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4716507822800214}
-  - component: {fileID: 82377588205291092}
-  - component: {fileID: 114901738326343884}
-  - component: {fileID: 114622438333624057}
+  - component: {fileID: 4411894871912404}
+  - component: {fileID: 82159002454245830}
+  - component: {fileID: 114271999116923568}
+  - component: {fileID: 114919197554581301}
   m_Layer: 0
-  m_Name: bgm_intro01
+  m_Name: BGM_Intro01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4716507822800214
+--- !u!4 &4411894871912404
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1543126921048003}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1867697172921004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -42,12 +42,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &82377588205291092
+--- !u!82 &82159002454245830
 AudioSource:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1543126921048003}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1867697172921004}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -109,47 +109,33 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 2
       time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!114 &114622438333624057
+    m_RotationOrder: 0
+--- !u!114 &114271999116923568
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1543126921048003}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1867697172921004}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20ed545e065427947be3450226805907, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fadeInTime: 0
-  fadeOutTime: 150
-  autoFadeout: 0
---- !u!114 &114901738326343884
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1543126921048003}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30dd24c2edf8f5c4cbba960ea7b16ffd, type: 3}
+  m_Script: {fileID: 11500000, guid: e3582d1c7d4196262b5c70e29e7c0f4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isSfx: 0
   audioClips:
-  - {fileID: 8300000, guid: 98d6d8b727648b64e84c67ed0403c34e, type: 3}
+  - {fileID: 8300000, guid: 64448aee462f42946be711100c0e4081, type: 3}
   probability: []
   volumOffset: 0
   pitchOffset: 0
@@ -158,3 +144,17 @@ MonoBehaviour:
   delayTime: 0
   autoDestroy: 0
   randomStartPosition: 0
+--- !u!114 &114919197554581301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1867697172921004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56356c3667620a0da4f9e1efb9a4ada8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeInTime: 0
+  fadeOutTime: 150
+  autoFadeout: 0

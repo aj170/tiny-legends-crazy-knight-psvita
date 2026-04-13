@@ -2779,4 +2779,18 @@ AnimationClip:
     m_KeepAdditionalBonesAnimation: 0
   m_EditorCurves: []
   m_EulerEditorCurves: []
-  m_Events: []
+  m_Events:
+  - time: 0.28333333
+    functionName: PlayAudio
+    data: Vo_WarriorElder_Attack01
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.3
+    functionName: PlayAudio
+    data: Ani_Hummer_Swish_Light01
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

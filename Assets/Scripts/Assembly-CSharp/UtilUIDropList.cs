@@ -1,6 +1,4 @@
-using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class UtilUIDropList : MonoBehaviour
@@ -23,9 +21,6 @@ public class UtilUIDropList : MonoBehaviour
 
 	private int stage_height_count = 3;
 
-	[CompilerGenerated]
-	private static Comparison<Crazy_NetMission_Item> _003C_003Ef__am_0024cache9;
-
 	private void InitWeaponList(List<Crazy_NetMission_Item> cnmilist)
 	{
 		weapons.Clear();
@@ -34,11 +29,7 @@ public class UtilUIDropList : MonoBehaviour
 		{
 			list.Add(item);
 		}
-		if (_003C_003Ef__am_0024cache9 == null)
-		{
-			_003C_003Ef__am_0024cache9 = _003CInitWeaponList_003Em__12;
-		}
-		list.Sort(_003C_003Ef__am_0024cache9);
+		list.Sort((Crazy_NetMission_Item a, Crazy_NetMission_Item b) => a.itemseq.CompareTo(b.itemseq));
 		List<Crazy_Weapon> list2 = Crazy_Weapon.ReadWeaponInfo();
 		foreach (Crazy_NetMission_Item item2 in list)
 		{
@@ -56,7 +47,7 @@ public class UtilUIDropList : MonoBehaviour
 		{
 			Crazy_Weapon crazy_Weapon = weapons[i];
 			bool flag = Crazy_Data.CurData().GetWeapon()[crazy_Weapon.id];
-			GameObject gameObject2 = UnityEngine.Object.Instantiate(gameObject) as GameObject;
+			GameObject gameObject2 = Object.Instantiate(gameObject) as GameObject;
 			gameObject2.name = "Weapon" + crazy_Weapon.id;
 			gameObject2.transform.parent = gameObject.transform.parent;
 			gameObject2.transform.localPosition = new Vector3(105f, 70f - (float)i * deltay, 0f);
@@ -105,7 +96,7 @@ public class UtilUIDropList : MonoBehaviour
 			GameObject gameObject4 = gameObject3;
 			if (k != 0)
 			{
-				gameObject4 = UnityEngine.Object.Instantiate(gameObject3) as GameObject;
+				gameObject4 = Object.Instantiate(gameObject3) as GameObject;
 				gameObject4.name = string.Format("PageDot{0:D02}", k + 1);
 				gameObject4.transform.parent = gameObject3.transform.parent;
 			}
@@ -154,11 +145,5 @@ public class UtilUIDropList : MonoBehaviour
 			component.UpdateMesh();
 			component2.UpdateMesh();
 		}
-	}
-
-	[CompilerGenerated]
-	private static int _003CInitWeaponList_003Em__12(Crazy_NetMission_Item a, Crazy_NetMission_Item b)
-	{
-		return a.itemseq.CompareTo(b.itemseq);
 	}
 }

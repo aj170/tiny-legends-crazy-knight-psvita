@@ -1,23 +1,11 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using UnityEngine;
 
 [RequireComponent(typeof(TAudioController))]
 public class Crazy_PlayerControl : Crazy_ObjectControl, IColliderMessage
 {
-	[CompilerGenerated]
-	private sealed class _003CAttackEnemy_003Ec__AnonStorey12
-	{
-		internal GameObject curEnemyObj;
-
-		internal bool _003C_003Em__5(GameObject a)
-		{
-			return a == curEnemyObj;
-		}
-	}
-
 	public static GameObject player;
 
 	private GameObject mainCameraParentObj;
@@ -278,15 +266,6 @@ public class Crazy_PlayerControl : Crazy_ObjectControl, IColliderMessage
 	protected GameObject m_arrow;
 
 	public bool bForbidRoll;
-
-	[CompilerGenerated]
-	private static Converter<Component, Renderer> _003C_003Ef__am_0024cache82;
-
-	[CompilerGenerated]
-	private static Converter<Component, Renderer> _003C_003Ef__am_0024cache83;
-
-	[CompilerGenerated]
-	private static Converter<Component, Renderer> _003C_003Ef__am_0024cache84;
 
 	public int GetMaxHealth()
 	{
@@ -825,13 +804,8 @@ public class Crazy_PlayerControl : Crazy_ObjectControl, IColliderMessage
 				attack_effect_Obj[j].transform.localPosition = Vector3.zero;
 				attack_effect_Obj[j].transform.parent = RootNode.transform;
 				List<Component> list = new List<Component>(attack_effect_Obj[j].GetComponentsInChildren(typeof(Renderer)));
-				List<Component> list4 = list;
-				if (_003C_003Ef__am_0024cache82 == null)
-				{
-					_003C_003Ef__am_0024cache82 = _003CInitWeaponLight_003Em__2;
-				}
-				List<Renderer> list3 = list4.ConvertAll(_003C_003Ef__am_0024cache82);
-				foreach (Renderer item in list3)
+				List<Renderer> list2 = list.ConvertAll((Component c) => (Renderer)c);
+				foreach (Renderer item in list2)
 				{
 					Color color2 = item.material.GetColor("_TintColor");
 					color2.a = 0f;
@@ -850,13 +824,8 @@ public class Crazy_PlayerControl : Crazy_ObjectControl, IColliderMessage
 				attack_effect_Obj[k].transform.localPosition = Vector3.zero;
 				attack_effect_Obj[k].transform.parent = RootNode.transform;
 				List<Component> list = new List<Component>(attack_effect_Obj[k].GetComponentsInChildren(typeof(Renderer)));
-				List<Component> list5 = list;
-				if (_003C_003Ef__am_0024cache83 == null)
-				{
-					_003C_003Ef__am_0024cache83 = _003CInitWeaponLight_003Em__3;
-				}
-				List<Renderer> list3 = list5.ConvertAll(_003C_003Ef__am_0024cache83);
-				foreach (Renderer item2 in list3)
+				List<Renderer> list2 = list.ConvertAll((Component c) => (Renderer)c);
+				foreach (Renderer item2 in list2)
 				{
 					Color color3 = item2.material.GetColor("_TintColor");
 					color3.a = 0f;
@@ -875,13 +844,8 @@ public class Crazy_PlayerControl : Crazy_ObjectControl, IColliderMessage
 				attack_effect_Obj[i].transform.localPosition = Vector3.zero;
 				attack_effect_Obj[i].transform.parent = RootNode.transform;
 				List<Component> list = new List<Component>(attack_effect_Obj[i].GetComponentsInChildren(typeof(Renderer)));
-				List<Component> list2 = list;
-				if (_003C_003Ef__am_0024cache84 == null)
-				{
-					_003C_003Ef__am_0024cache84 = _003CInitWeaponLight_003Em__4;
-				}
-				List<Renderer> list3 = list2.ConvertAll(_003C_003Ef__am_0024cache84);
-				foreach (Renderer item3 in list3)
+				List<Renderer> list2 = list.ConvertAll((Component c) => (Renderer)c);
+				foreach (Renderer item3 in list2)
 				{
 					Color color = item3.material.GetColor("_TintColor");
 					color.a = 0f;
@@ -2447,12 +2411,12 @@ public class Crazy_PlayerControl : Crazy_ObjectControl, IColliderMessage
 		Dictionary<int, GameObject>.KeyCollection keys = Crazy_GlobalData.enemyList.Keys;
 		foreach (int item in keys)
 		{
-			_003CAttackEnemy_003Ec__AnonStorey12 _003CAttackEnemy_003Ec__AnonStorey = new _003CAttackEnemy_003Ec__AnonStorey12();
-			if (!Crazy_GlobalData.enemyList.TryGetValue(item, out _003CAttackEnemy_003Ec__AnonStorey.curEnemyObj) || attacklist.Exists(_003CAttackEnemy_003Ec__AnonStorey._003C_003Em__5))
+			GameObject curEnemyObj;
+			if (!Crazy_GlobalData.enemyList.TryGetValue(item, out curEnemyObj) || attacklist.Exists((GameObject a) => a == curEnemyObj))
 			{
 				continue;
 			}
-			Crazy_EnemyControl crazy_EnemyControl = _003CAttackEnemy_003Ec__AnonStorey.curEnemyObj.GetComponent("Crazy_EnemyControl") as Crazy_EnemyControl;
+			Crazy_EnemyControl crazy_EnemyControl = curEnemyObj.GetComponent("Crazy_EnemyControl") as Crazy_EnemyControl;
 			if (crazy_EnemyControl.IsDie() || !crazy_EnemyControl.GetActive())
 			{
 				continue;
@@ -2483,7 +2447,7 @@ public class Crazy_PlayerControl : Crazy_ObjectControl, IColliderMessage
 					PlayShakeSceenEffect(cur_attackstatus.attackjudgmentinfo[index].attackshaketime, cur_attackstatus.attackjudgmentinfo[index].attackshakeintervaltime, cur_attackstatus.attackjudgmentinfo[index].attackshakeamplitude);
 				}
 				Vector3 vector3 = default(Vector3);
-				vector3 = _003CAttackEnemy_003Ec__AnonStorey.curEnemyObj.transform.position - base.transform.position;
+				vector3 = curEnemyObj.transform.position - base.transform.position;
 				vector3.Normalize();
 				cur_attackstatus.attackjudgmentinfo[index].hitdata.beatDir = vector3;
 				if (crazy_EnemyControl.Hurt(cur_attackstatus.attackjudgmentinfo[index].attackdamage * (weapondamage + (float)Crazy_PlayerClass_Level.GetPlayerLevelinfo(Crazy_Data.CurData().GetLevel()).damage) * class_damage_rate * GetComboRate(), cur_attackstatus.attackjudgmentinfo[index].hitdata, cur_weapon.type, usingskill))
@@ -2498,7 +2462,7 @@ public class Crazy_PlayerControl : Crazy_ObjectControl, IColliderMessage
 				}
 				if (!cur_attackstatus.attackjudgmentinfo[index].attackreset)
 				{
-					attacklist.Add(_003CAttackEnemy_003Ec__AnonStorey.curEnemyObj);
+					attacklist.Add(curEnemyObj);
 				}
 			}
 		}
@@ -2689,23 +2653,5 @@ public class Crazy_PlayerControl : Crazy_ObjectControl, IColliderMessage
 		{
 			Crazy_Data.CurData().SetExp(num);
 		}
-	}
-
-	[CompilerGenerated]
-	private static Renderer _003CInitWeaponLight_003Em__2(Component c)
-	{
-		return (Renderer)c;
-	}
-
-	[CompilerGenerated]
-	private static Renderer _003CInitWeaponLight_003Em__3(Component c)
-	{
-		return (Renderer)c;
-	}
-
-	[CompilerGenerated]
-	private static Renderer _003CInitWeaponLight_003Em__4(Component c)
-	{
-		return (Renderer)c;
 	}
 }

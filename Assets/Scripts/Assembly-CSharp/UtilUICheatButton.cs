@@ -6,9 +6,10 @@ public class UtilUICheatButton : MonoBehaviour
 
 	private void Start()
 	{
-		if (Crazy_Global.IsTestVersion)
+        base.gameObject.transform.localPosition = showposition;
+        /*if (Crazy_Global.IsTestVersion)
 		{
 			base.gameObject.transform.localPosition = showposition;
-		}
+		}*/
 	}
 }

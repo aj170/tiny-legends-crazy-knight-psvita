@@ -7,7 +7,6 @@ public class UICrazyMain : MonoBehaviour
 
 	private void Awake()
 	{
-		Application.targetFrameRate = 240;
 		Crazy_Achievement.Initialize();
 		Crazy_AttackStatus.Initialize();
 		Crazy_Award.Initialize();

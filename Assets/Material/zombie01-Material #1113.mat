@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: 'zombie01-Material #1113'
-  m_Shader: {fileID: 4800000, guid: 988665ef0debe75418dc629d2f76772e, type: 3}
+  m_Shader: {fileID: 4800000, guid: ee6efb827fb666f47bfbcc8699da9d84, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -19,9 +19,14 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 02c02a0d04e35a44d86d3b16af81eaff, type: 3}
+        m_Texture: {fileID: 2800000, guid: e845b1f2823f93247800c128730d940d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    m_Floats: []
+    m_Floats:
+    - _Outline: 0.0088461535
+    - _Shininess: 0.09716346
     m_Colors:
     - _Color: {r: 0, g: 0, b: 0, a: 1}
+    - _OutlineColor: {r: 0, g: 1, b: 0, a: 1}
+    - _ReflectColor: {r: 0, g: 0, b: 0, a: 0.5019608}
+    - _SpecColor: {r: 0, g: 0, b: 0, a: 1}

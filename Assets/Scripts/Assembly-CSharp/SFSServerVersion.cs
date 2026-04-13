@@ -31,7 +31,8 @@ public class SFSServerVersion : MonoBehaviour
 
 	private int Version = -1;
 
-	protected string url = "http://account.trinitigame.com/game/TLCK/TLCK_NewVersion_Android.bytes";
+	//protected string url = "http://account.trinitigame.com/game/TLCK/TLCK_NewVersion_Android.bytes";
+	protected string url = ServerX.configUrl;
 
 	protected string key = "324516";
 
@@ -117,6 +118,41 @@ public class SFSServerVersion : MonoBehaviour
 
 	protected IEnumerator Init()
 	{
+		Version = 1;
+		try
+		{
+#if UNITY_STANDALONE && !UNITY_EDITOR
+			string path = Application.dataPath + "/../online-config.txt";
+#else
+            string path = Path.Combine(Application.persistentDataPath, "online-config.txt");
+#endif
+            if (File.Exists(path))
+            {
+                if (ServerX.Parse(File.ReadAllText(path), ref SFSDomainServer, ref SFSDomainPort))
+                {
+                    callback(1);
+                    yield break;
+                }
+            }
+        }
+		catch { }
+
+        WWW www = new WWW(url);
+        yield return www;
+        if (www.error != null)
+        {
+            if (callback_error != null)
+            {
+                callback_error();
+            }
+            yield break;
+        }
+		if (ServerX.Parse(www.text, ref SFSDomainServer, ref SFSDomainPort)) callback(1);
+		else callback_error();
+        /*SFSServer = ServerX.serverIP;
+		SFSPort = ServerX.serverPort;
+        callback(1);*/
+        /*
 		WWW www = new WWW(url);
 		yield return www;
 		if (www.error != null)
@@ -162,6 +198,6 @@ public class SFSServerVersion : MonoBehaviour
 			{
 				callback_error();
 			}
-		}
-	}
+		}*/
+    }
 }

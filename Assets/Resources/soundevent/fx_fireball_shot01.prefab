@@ -2,39 +2,39 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!1001 &100100000
 Prefab:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1968248983303325}
+  m_RootGameObject: {fileID: 1856492908141798}
   m_IsPrefabParent: 1
---- !u!1 &1968248983303325
+--- !u!1 &1856492908141798
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4903754562639936}
-  - component: {fileID: 82210245962138256}
-  - component: {fileID: 114451989668575471}
-  - component: {fileID: 114352247616982131}
+  - component: {fileID: 4752860547925215}
+  - component: {fileID: 82403988912977914}
+  - component: {fileID: 114316316053814753}
+  - component: {fileID: 114842573912022597}
   m_Layer: 0
-  m_Name: fx_fireball_shot01
+  m_Name: Fx_Fireball_shot01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4903754562639936
+--- !u!4 &4752860547925215
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1968248983303325}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1856492908141798}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -42,12 +42,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &82210245962138256
+--- !u!82 &82403988912977914
 AudioSource:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1968248983303325}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1856492908141798}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -128,35 +128,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &114352247616982131
+--- !u!114 &114316316053814753
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1968248983303325}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1856492908141798}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f1520e390f13ad4bb40009d3a0dedcf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxCount: 1
-  deltaTime: 0.2
---- !u!114 &114451989668575471
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1968248983303325}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30dd24c2edf8f5c4cbba960ea7b16ffd, type: 3}
+  m_Script: {fileID: 11500000, guid: e3582d1c7d4196262b5c70e29e7c0f4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isSfx: 1
   audioClips:
-  - {fileID: 8300000, guid: c37494fea8eaaaa4aad6ea486c43449c, type: 3}
-  - {fileID: 8300000, guid: b4eceddd4bcd5f4428ef094d73e0a8c4, type: 3}
-  - {fileID: 8300000, guid: 45bd9895bb7b04d41be01759ddeee0e1, type: 3}
+  - {fileID: 8300000, guid: 6f387defcc8d9674bb96264587979c4d, type: 3}
+  - {fileID: 8300000, guid: ef692dda635cecf498bbb09f50bcd09b, type: 3}
+  - {fileID: 8300000, guid: eb1743cb89e070f4c91d499c23012079, type: 3}
   probability: []
   volumOffset: 0.1
   pitchOffset: 0
@@ -165,3 +152,16 @@ MonoBehaviour:
   delayTime: 0
   autoDestroy: 0
   randomStartPosition: 0
+--- !u!114 &114842573912022597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1856492908141798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64a37e59c578bc44061723623ff7d0f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxCount: 1
+  deltaTime: 0.2

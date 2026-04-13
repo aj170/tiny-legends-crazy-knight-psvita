@@ -2,39 +2,39 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!1001 &100100000
 Prefab:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1113742920633300}
+  m_RootGameObject: {fileID: 1361775029861353}
   m_IsPrefabParent: 1
---- !u!1 &1113742920633300
+--- !u!1 &1361775029861353
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4188761770186317}
-  - component: {fileID: 82973297419258337}
-  - component: {fileID: 114155676237099900}
-  - component: {fileID: 114897204838958093}
+  - component: {fileID: 4970678211221557}
+  - component: {fileID: 82391810698836951}
+  - component: {fileID: 114545898034802615}
+  - component: {fileID: 114251641855208982}
   m_Layer: 0
-  m_Name: vo_ghoul_attack01
+  m_Name: Vo_Ghoul_Attack01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4188761770186317
+--- !u!4 &4970678211221557
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1113742920633300}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1361775029861353}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -42,12 +42,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &82973297419258337
+--- !u!82 &82391810698836951
 AudioSource:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1113742920633300}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1361775029861353}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -128,22 +128,35 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &114155676237099900
+--- !u!114 &114251641855208982
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1113742920633300}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1361775029861353}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30dd24c2edf8f5c4cbba960ea7b16ffd, type: 3}
+  m_Script: {fileID: 11500000, guid: 64a37e59c578bc44061723623ff7d0f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxCount: 1
+  deltaTime: 0.2
+--- !u!114 &114545898034802615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1361775029861353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3582d1c7d4196262b5c70e29e7c0f4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isSfx: 1
   audioClips:
-  - {fileID: 8300000, guid: 2e53ca310f4ebf041a5cde7e70757b96, type: 3}
-  - {fileID: 8300000, guid: e8f4da66e5b6b284fbc99a6373246435, type: 3}
-  - {fileID: 8300000, guid: 501540a1e586f25448026baf58640d1e, type: 3}
+  - {fileID: 8300000, guid: 4915760833daa0a48a9ba534fa2b9688, type: 3}
+  - {fileID: 8300000, guid: 037e2e754998fef47a827071ab203a28, type: 3}
+  - {fileID: 8300000, guid: 7250cca5ef09d1a43a079838cb76713c, type: 3}
   probability: []
   volumOffset: 0.1
   pitchOffset: 0
@@ -152,16 +165,3 @@ MonoBehaviour:
   delayTime: 0
   autoDestroy: 0
   randomStartPosition: 0
---- !u!114 &114897204838958093
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1113742920633300}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f1520e390f13ad4bb40009d3a0dedcf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxCount: 1
-  deltaTime: 0.2

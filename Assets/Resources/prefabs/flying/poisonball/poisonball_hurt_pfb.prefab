@@ -2,26 +2,25 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!1001 &100100000
 Prefab:
+  m_ObjectHideFlags: 1
   serializedVersion: 2
-  m_ObjectHideFlags: 0
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1271852532863181}
+  m_RootGameObject: {fileID: 1146893618338289}
   m_IsPrefabParent: 1
-  m_IsExploded: 0
---- !u!1 &1271852532863181
+--- !u!1 &1146893618338289
 GameObject:
-  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 4925917463350700}
-  - 114: {fileID: 114528465111387817}
-  - 114: {fileID: 114543365843137279}
+  - component: {fileID: 4938039128983179}
+  - component: {fileID: 114615759393572070}
+  - component: {fileID: 114836494866210960}
   m_Layer: 0
   m_Name: poisonball_hurt_pfb
   m_TagString: Untagged
@@ -29,36 +28,40 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4925917463350700
+--- !u!4 &4938039128983179
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1271852532863181}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1146893618338289}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
---- !u!114 &114528465111387817
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114615759393572070
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1271852532863181}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1146893618338289}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7187fa75d8eb7004e95d073aa3e45023, type: 3}
-  m_Name:
+  m_Script: {fileID: 11500000, guid: b8a1ce6d30341a7f2104f8f6179af735, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   radius: 2.5
---- !u!114 &114543365843137279
+--- !u!114 &114836494866210960
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1271852532863181}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1146893618338289}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75190fe5f17dd47469b99fd1908f40f7, type: 3}
-  m_Name:
+  m_Script: {fileID: 11500000, guid: 5eb62162bd12f51a79427903fd787e95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   timeToDestroy: 1

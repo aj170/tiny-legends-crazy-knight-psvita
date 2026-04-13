@@ -1,21 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class Crazy_PlayerControlMage_Net : Crazy_PlayerControl_Net
 {
-	[CompilerGenerated]
-	private sealed class _003CMeteorAttackHurt_003Ec__AnonStorey15
-	{
-		internal GameObject curEnemyObj;
-
-		internal bool _003C_003Em__8(GameObject a)
-		{
-			return a == curEnemyObj;
-		}
-	}
-
 	private string m_attackAnimName;
 
 	private GameObject obj;
@@ -366,12 +354,12 @@ public class Crazy_PlayerControlMage_Net : Crazy_PlayerControl_Net
 		Dictionary<int, GameObject>.KeyCollection keys = Crazy_GlobalData.enemyList.Keys;
 		foreach (int item in keys)
 		{
-			_003CMeteorAttackHurt_003Ec__AnonStorey15 _003CMeteorAttackHurt_003Ec__AnonStorey = new _003CMeteorAttackHurt_003Ec__AnonStorey15();
-			if (!Crazy_GlobalData.enemyList.TryGetValue(item, out _003CMeteorAttackHurt_003Ec__AnonStorey.curEnemyObj) || attacklist.Exists(_003CMeteorAttackHurt_003Ec__AnonStorey._003C_003Em__8))
+			GameObject curEnemyObj;
+			if (!Crazy_GlobalData.enemyList.TryGetValue(item, out curEnemyObj) || attacklist.Exists((GameObject a) => a == curEnemyObj))
 			{
 				continue;
 			}
-			Crazy_EnemyControl crazy_EnemyControl = _003CMeteorAttackHurt_003Ec__AnonStorey.curEnemyObj.GetComponent("Crazy_EnemyControl") as Crazy_EnemyControl;
+			Crazy_EnemyControl crazy_EnemyControl = curEnemyObj.GetComponent("Crazy_EnemyControl") as Crazy_EnemyControl;
 			if (crazy_EnemyControl.IsDie() || !crazy_EnemyControl.GetActive())
 			{
 				continue;
@@ -402,7 +390,7 @@ public class Crazy_PlayerControlMage_Net : Crazy_PlayerControl_Net
 					PlayShakeSceenEffect(cur_attackstatus.attackjudgmentinfo[0].attackshaketime, cur_attackstatus.attackjudgmentinfo[0].attackshakeintervaltime, cur_attackstatus.attackjudgmentinfo[0].attackshakeamplitude);
 				}
 				Vector3 vector3 = default(Vector3);
-				vector3 = _003CMeteorAttackHurt_003Ec__AnonStorey.curEnemyObj.transform.position - base.transform.position;
+				vector3 = curEnemyObj.transform.position - base.transform.position;
 				vector3.Normalize();
 				cur_attackstatus.attackjudgmentinfo[0].hitdata.beatDir = vector3;
 				if (crazy_EnemyControl.Hurt(cur_attackstatus.attackjudgmentinfo[0].attackdamage * (weapondamage + (float)Crazy_PlayerClass_Level.GetPlayerLevelinfo(Crazy_Data.CurData().GetLevel()).damage) * class_damage_rate * GetComboRate(), cur_attackstatus.attackjudgmentinfo[0].hitdata, cur_weapon.type, usingskill))
@@ -417,7 +405,7 @@ public class Crazy_PlayerControlMage_Net : Crazy_PlayerControl_Net
 				}
 				if (!cur_attackstatus.attackjudgmentinfo[0].attackreset)
 				{
-					attacklist.Add(_003CMeteorAttackHurt_003Ec__AnonStorey.curEnemyObj);
+					attacklist.Add(curEnemyObj);
 				}
 			}
 		}

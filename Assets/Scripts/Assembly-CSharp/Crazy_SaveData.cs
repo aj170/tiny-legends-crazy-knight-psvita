@@ -895,7 +895,6 @@ public class Crazy_SaveData
 
 	private static Crazy_SaveData DeCodeData()
 	{
-		//Discarded unreachable code: IL_00ae
 		Crazy_SaveData crazy_SaveData = new Crazy_SaveData();
 		string path = Utils.SavePath() + "/Save.data";
 		XmlDocument xmlDocument = new XmlDocument();

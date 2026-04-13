@@ -58,7 +58,11 @@ public class UICrazyScene : MonoBehaviour, TUIHandler
 		m_tui.transform.Find("TUIControl").Find("Fade").GetComponent<TUIFade>()
 			.FadeIn();
 		Movie();
-	}
+
+#if UNITY_STANDALONE || UNITY_EDITOR
+		PCInputStart();
+#endif
+    }
 
 	public virtual void OnApplicationPause(bool pause)
 	{
@@ -104,10 +108,83 @@ public class UICrazyScene : MonoBehaviour, TUIHandler
 			for (int i = 0; i < input.Length; i++)
 			{
 				m_tui.HandleInput(input[i]);
-			}
-		}
-		m_imp.Update();
+            }
+            if (Input.GetButtonDown("Pause"))
+            {
+                if (Time.timeScale == 0) m_imp.OnContinueDown();
+                else m_imp.OnPauseDown();
+            }
+
+#if UNITY_STANDALONE || UNITY_EDITOR
+            PCInput(); // DO NOT COMPILE ON NON TOUCHSCREEN, OVERRIDES TOUCH CONTROLS!!!
+#endif
+        }
+        m_imp.Update();
 	}
+#if UNITY_STANDALONE || UNITY_EDITOR
+    Vector2 movement, lookMouse, lookAxis; // yes im not creating new vector every frame
+    bool isShoot = false;
+
+	void PCInputStart()
+	{
+		switch (Crazy_SceneManager.GetInstance().GetScene().GetPlayerControl().UseWeaponType())
+		{
+			case Crazy_Weapon_Type.Bow: isShoot = true; break;
+			case Crazy_Weapon_Type.Staff: isShoot = true; break;
+		}
+	}
+
+    // DO NOT COMPILE ON NON TOUCHSCREEN, OVERRIDES TOUCH CONTROLS!!!
+    void PCInput()
+	{
+		if (isShoot)
+        {
+			lookAxis.Set(Input.GetAxisRaw("HorizontalLook"), Input.GetAxisRaw("VerticalLook"));
+
+            // if (Time.timeScale != 0) is a quick fix, didnt bother searching for an actual bool
+            if (lookAxis != Vector2.zero)
+            {
+                if (Time.timeScale != 0) m_imp.OnForward(-lookAxis); // Yes its supposed to be inverted
+            }
+			else
+            {
+                lookMouse.Set(Calculate(Input.mousePosition.x, Screen.width),
+                    Calculate(Input.mousePosition.y, Screen.height));
+
+                if (Time.timeScale != 0) m_imp.OnForward(-lookMouse); // Yes its supposed to be inverted
+            }
+
+            if (Input.GetButtonDown("Attack")) m_imp.OnShotDown();
+            else if (Input.GetButtonUp("Attack")) m_imp.OnShotUp();
+        }
+		else
+        {
+            if (Input.GetButtonDown("Attack")) m_imp.OnAttackDown();
+        }
+
+		// Yes thats the check from UtilUISkillButton.cs
+		if (Input.GetButtonDown("Skill")
+			&& Crazy_SceneManager.GetInstance().GetScene().GetPlayerControl().GetSkill())
+			m_imp.OnSkillDown();
+
+        if (Input.GetButtonDown("Pause")) 
+		{
+            if (Time.timeScale == 0) m_imp.OnContinueDown();
+            else m_imp.OnPauseDown();
+        }
+
+        movement.Set(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+		m_imp.OnMove(-movement); // Yes its supposed to be inverted
+
+        if (Input.GetButtonDown("Roll")) m_imp.OnRollDown();
+        if (Input.GetButtonDown("Revive")) m_imp.OnReviveDown(); // multiplayer?
+    }
+
+	float Calculate(float current, float max)
+	{
+		return (current / max) * 2f - 1f;
+    }
+#endif
 
 	public void HandleEvent(TUIControl control, int eventType, float wparam, float lparam, object data)
 	{

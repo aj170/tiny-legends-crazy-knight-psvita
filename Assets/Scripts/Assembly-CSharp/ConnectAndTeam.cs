@@ -279,7 +279,9 @@ public class ConnectAndTeam : MonoBehaviour
 
 	private void InitServer()
 	{
-		serverName = TNetManager.Instance.GetHostAddresses(serverName);
+		// its already set on line 238
+
+		/*serverName = TNetManager.Instance.GetHostAddresses(serverName);
 		if (serverName == string.Empty)
 		{
 			if (bNetBattleTest)
@@ -292,7 +294,7 @@ public class ConnectAndTeam : MonoBehaviour
 				serverName = SFSServerVersion.Instance.SFSServer;
 				serverPort = SFSServerVersion.Instance.SFSPort;
 			}
-		}
+		}*/
 		Debug.Log("domain to ip=====================" + serverName);
 		TNetManager.Connect(serverName, serverPort);
 		RegisterTNetCallBacks();

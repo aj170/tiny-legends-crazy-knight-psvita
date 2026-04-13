@@ -2,39 +2,39 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!1001 &100100000
 Prefab:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1436403197889139}
+  m_RootGameObject: {fileID: 1953756787417343}
   m_IsPrefabParent: 1
---- !u!1 &1436403197889139
+--- !u!1 &1953756787417343
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4800950207589247}
-  - component: {fileID: 82507017392716494}
-  - component: {fileID: 114643930464418401}
-  - component: {fileID: 114200542503283137}
+  - component: {fileID: 4641824105859895}
+  - component: {fileID: 82150733233067306}
+  - component: {fileID: 114927574862876410}
+  - component: {fileID: 114752417516835154}
   m_Layer: 0
-  m_Name: fx_icedemage
+  m_Name: Fx_IceDemage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4800950207589247
+--- !u!4 &4641824105859895
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1436403197889139}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1953756787417343}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -42,12 +42,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &82507017392716494
+--- !u!82 &82150733233067306
 AudioSource:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1436403197889139}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1953756787417343}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -128,35 +128,35 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &114200542503283137
+--- !u!114 &114752417516835154
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1436403197889139}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1953756787417343}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f1520e390f13ad4bb40009d3a0dedcf, type: 3}
+  m_Script: {fileID: 11500000, guid: 64a37e59c578bc44061723623ff7d0f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxCount: 1
   deltaTime: 0.2
---- !u!114 &114643930464418401
+--- !u!114 &114927574862876410
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1436403197889139}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1953756787417343}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30dd24c2edf8f5c4cbba960ea7b16ffd, type: 3}
+  m_Script: {fileID: 11500000, guid: e3582d1c7d4196262b5c70e29e7c0f4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isSfx: 1
   audioClips:
-  - {fileID: 8300000, guid: b01d2afd7a70379489db10577e64d063, type: 3}
-  - {fileID: 8300000, guid: d67e4750e4f39b64c9335070e087e233, type: 3}
-  - {fileID: 8300000, guid: ab6dd53fa199599428fe39a1b78b399d, type: 3}
+  - {fileID: 8300000, guid: 4a204d39a6cfdb6488aa03bdac124972, type: 3}
+  - {fileID: 8300000, guid: 5d36a2bf9c3d44940b69d99a10f9a89c, type: 3}
+  - {fileID: 8300000, guid: 8dfabfbd8200d2247b50c05753ef6416, type: 3}
   probability: []
   volumOffset: 0.1
   pitchOffset: 0.08

@@ -170,6 +170,7 @@ public class TrinitiMeshAnimation : MonoBehaviour
 		m_MeshFilter.mesh = m_AnimaitonClip.m_MeshFrames[m_iCurrentFrame];
 		if (null != m_MeshCollider)
 		{
+			//m_MeshCollider.mesh = m_AnimaitonClip.m_MeshFrames[m_iCurrentFrame];
 			m_MeshCollider.sharedMesh = m_AnimaitonClip.m_MeshFrames[m_iCurrentFrame];
 		}
 	}

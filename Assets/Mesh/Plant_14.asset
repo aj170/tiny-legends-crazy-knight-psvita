@@ -6,28 +6,28 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Plant_14
+  m_Name: plant_14
   m_SubMeshes:
   - serializedVersion: 2
     firstByte: 0
-    indexCount: 12
+    indexCount: 6
     topology: 0
     firstVertex: 0
-    vertexCount: 6
+    vertexCount: 4
     localAABB:
-      m_Center: {x: 0, y: -4.4703484E-08, z: 2.9802322E-08}
-      m_Extent: {x: 1.2100797, y: 0.46162516, z: 0.7348528}
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 1.1786976, y: 0, z: 5.5827737}
   m_MeshCompression: 0
   m_StreamCompression: 0
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexBuffer: 000001000200000003000100010003000400010004000500
+  m_IndexBuffer: 000001000200000003000100
   m_Skin: []
   m_BindPose: []
   m_VertexData:
-    m_CurrentChannels: 59
-    m_VertexCount: 6
+    m_CurrentChannels: 63
+    m_VertexCount: 4
     m_Channels:
     - stream: 0
       offset: 0
@@ -38,25 +38,25 @@ Mesh:
       format: 0
       dimension: 3
     - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
       offset: 24
+      format: 2
+      dimension: 1
+    - stream: 0
+      offset: 28
       format: 0
       dimension: 2
     - stream: 0
-      offset: 32
+      offset: 36
       format: 0
       dimension: 2
     - stream: 0
-      offset: 40
+      offset: 44
       format: 0
       dimension: 4
     m_Streams:
-    - channelMask: 59
+    - channelMask: 63
       offset: 0
-      stride: 56
+      stride: 60
       dividerOp: 0
       frequency: 0
     - channelMask: 0
@@ -74,8 +74,8 @@ Mesh:
       stride: 0
       dividerOp: 0
       frequency: 0
-    m_DataSize: 336
-    _typelessdata: e4e39a3f205aec3e07d9313f5e01b23e2c4864bf7959943e000048b39cec1a3ff78d633fec4c413ec0426fbfc268b5bea2f0fd3c000080bf00000000235aecbe06d931bf00000000537873bf31389e3e0000003f000000008ff06b3f893c1a3e000080bfe4b719b02a8becb0000080bfe4e39a3f00b83cbb501f3cbf5e01b23e2c4864bf7959943e0000000000000000f78d633f893c1a3ec0426fbfc268b5be9ef0fd3c000080bf00000000a8b73c3b511f3c3f00000000537873bf32389e3e0000003f9cec1a3f87f06b3fec4c413e000080bf554fa9b0a14482b1000080bfe4e39abf205aec3e07d9313f5d01b2be2c4864bf7959943e0000803f9cec1a3f1c53743fec4c413ec0426fbfc168b53e9df0fdbc000080bfe4e39abf00b83cbb501f3cbf5d01b2be2c4864bf7959943e0000803f000000001c53743f893c1a3ec0426fbfc168b53e99f0fdbc000080bf
+    m_DataSize: 240
+    _typelessdata: 90df963f0000000015a6b24000000000000080bf00000000ffffffff0408ca391edb233f0cd8483f07fb433f69cc9f3600000000000080bf000080bf90df96bf0000000015a6b2c000000000000080bf00000000ffffffff23217f3f73537e3f4e555b3f1cd2d83eb20a9e3600000000000080bf000080bf90df963f0000000015a6b2c000000000000080bf00000000ffffffff2d217f3fa2db233f22d8483f12d2d83ea7b99d3600000000000080bf000080bf90df96bf0000000015a6b24000000000000080bf00000000ffffffff74bec939ed527e3f36555b3f0cfb433f731da03600000000000080bf000080bf
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -132,7 +132,7 @@ Mesh:
       m_Data:
       m_BitSize: 0
   m_LocalAABB:
-    m_Center: {x: 0, y: -4.4703484E-08, z: 2.9802322E-08}
-    m_Extent: {x: 1.2100797, y: 0.46162516, z: 0.7348528}
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 1.1786976, y: 0, z: 5.5827737}
   m_MeshUsageFlags: 0
   m_MeshOptimized: 1

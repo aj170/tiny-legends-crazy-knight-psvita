@@ -2,38 +2,38 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!1001 &100100000
 Prefab:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1909823553169802}
+  m_RootGameObject: {fileID: 1985335917743284}
   m_IsPrefabParent: 1
---- !u!1 &1909823553169802
+--- !u!1 &1985335917743284
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4343468949427380}
-  - component: {fileID: 82821527687801264}
-  - component: {fileID: 114848532684945566}
+  - component: {fileID: 4827894651461277}
+  - component: {fileID: 82411427164084407}
+  - component: {fileID: 114338602783384584}
   m_Layer: 0
-  m_Name: ui_button_eqsword
+  m_Name: UI_Button_EqSword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4343468949427380
+--- !u!4 &4827894651461277
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1909823553169802}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1985335917743284}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -41,12 +41,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &82821527687801264
+--- !u!82 &82411427164084407
 AudioSource:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1909823553169802}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1985335917743284}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -121,20 +121,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &114848532684945566
+--- !u!114 &114338602783384584
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1909823553169802}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1985335917743284}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30dd24c2edf8f5c4cbba960ea7b16ffd, type: 3}
+  m_Script: {fileID: 11500000, guid: e3582d1c7d4196262b5c70e29e7c0f4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isSfx: 1
   audioClips:
-  - {fileID: 8300000, guid: 7adb501c56efc0343989eb65ad2d8fb6, type: 3}
+  - {fileID: 8300000, guid: bc5f252ad9f2bc74da99b8828b7a51bf, type: 3}
   probability: []
   volumOffset: 0
   pitchOffset: 0

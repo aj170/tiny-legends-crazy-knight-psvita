@@ -6,23 +6,104 @@ public class Crazy_UIJoystickEx : Crazy_UIJoystick
 
 	public bool pressed;
 
-	private bool reset;
+    private Vector2 keyboardInput = Vector2.zero;
 
-	public new void Start()
+    public new void Start()
 	{
 		base.Start();
 		UpdateFrame();
 	}
 
-	public void Update()
-	{
-		if (!Application.isMobilePlatform && name == "MoveButton")
-		{
-			DoMovePC();
-		}
-	}
+    // ==================== MAIN UPDATE - ADDED KEYBOARD SUPPORT ====================
+    private void Update()
+    {
+        Vector2 input = Vector2.zero;
 
-	protected void UpdateFrame()
+        // 1. Keyboard input (WASD + Arrow Keys)
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
+            input.y += 1f;
+        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
+            input.y -= 1f;
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+            input.x -= 1f;
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+            input.x += 1f;
+
+        // 2. PS Vita / Controller Left Analog Stick (only when building for Vita)
+
+    float h = Input.GetAxis("Left Joystick Horizontal");
+    float v = Input.GetAxis("Left Joystick Vertical");
+    Vector2 vitaInput = new Vector2(h, v);
+
+    // Use Vita stick if it's being moved (gives it priority)
+    if (vitaInput.sqrMagnitude > 0.1f)
+    {
+        input = vitaInput;
+    }
+
+
+        // Normalize input (prevents faster diagonal movement)
+        if (input.sqrMagnitude > 0.001f)
+        {
+            input.Normalize();
+        }
+
+        // === APPLY INPUT TO VIRTUAL JOYSTICK ===
+        if (input.sqrMagnitude > 0.001f)
+        {
+            if (!pressed)
+            {
+                pressed = true;
+                UpdateFrame();
+            }
+
+            // Simulate joystick movement
+            Vector2 simulatedPos = new Vector2(base.transform.position.x, base.transform.position.y)
+                                 + input * max;
+
+            DoMove(simulatedPos);
+            PostEvent(this, 2, input.x, input.y, null);
+        }
+        // Reset when no input (and no touch active)
+        else if (pressed && fingerId == -1)
+        {
+            pressed = false;
+            UpdateFrame();
+            DoReset();
+            PostEvent(this, 3, 0f, 0f, null);
+        }
+
+        // ==================== KEYBOARD / CONTROLLER BUTTONS ====================
+        // Attack / Fight
+        if (Input.GetButtonDown("Attack") || Input.GetKeyDown(KeyCode.Space))
+        {
+            if (Crazy_PlayerControl.player != null)
+            {
+                Crazy_PlayerControl.player.GetComponent<Crazy_PlayerControl>().PlayerAttack();
+            }
+        }
+
+        // Roll
+        if (Input.GetButtonDown("Roll"))
+        {
+            if (Crazy_PlayerControl.player != null)
+            {
+                Crazy_PlayerControl.player.GetComponent<Crazy_PlayerControl>().PlayerRoll();
+            }
+        }
+
+        // Skill
+        if (Input.GetButtonDown("Skill"))
+        {
+            if (Crazy_PlayerControl.player != null)
+            {
+                Crazy_PlayerControl.player.GetComponent<Crazy_PlayerControl>().PlayerSkill();
+            }
+        }
+        
+    }
+
+    protected void UpdateFrame()
 	{
 		HideFrame();
 		ShowFrame();
@@ -57,10 +138,6 @@ public class Crazy_UIJoystickEx : Crazy_UIJoystick
 
 	public override bool HandleInput(TUIInput input)
 	{
-		if (!Application.isMobilePlatform && name == "MoveButton")
-		{
-			return false;
-		}
 		if (input.inputType == TUIInputType.Began)
 		{
 			if (PtInControl(input.position))
@@ -116,33 +193,6 @@ public class Crazy_UIJoystickEx : Crazy_UIJoystick
 		frame.transform.position = new Vector3(vector4.x, vector4.y, frame.transform.position.z);
 		frame_d.transform.position = new Vector3(vector4.x, vector4.y, frame_d.transform.position.z);
 		return vector3;
-	}
-
-	private void DoMovePC()
-	{
-		Vector2 move = new Vector2(Input.GetKey(KeyCode.A) ? -max : Input.GetKey(KeyCode.D) ? max : 0,Input.GetKey(KeyCode.S) ? -max : Input.GetKey(KeyCode.W) ? max : 0);
-
-		if (move.x == 0 && move.y == 0 && !reset)
-		{
-			reset = true;
-			Reset();
-			PostEvent(this, 3, 0f, 0f, null);
-			UpdateFrame();
-			return;
-		}
-		else
-		{
-			if (reset)
-			{
-				PostEvent(this, 1, 0f, 0f, null);
-				PostEvent(this, 2, move.x, move.y, null);
-				UpdateFrame();
-			}
-			reset = false;
-			frame.transform.position = new Vector3(move.x, move.y, frame.transform.position.z);
-			frame_d.transform.position = new Vector3(move.x, move.y, frame_d.transform.position.z);
-			PostEvent(this, 2, move.x, move.y, null);
-		}
 	}
 
 	public void Reset()

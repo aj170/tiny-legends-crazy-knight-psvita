@@ -2,26 +2,25 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!1001 &100100000
 Prefab:
+  m_ObjectHideFlags: 1
   serializedVersion: 2
-  m_ObjectHideFlags: 0
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1383706817246107}
+  m_RootGameObject: {fileID: 1483272712742292}
   m_IsPrefabParent: 1
-  m_IsExploded: 0
---- !u!1 &1383706817246107
+--- !u!1 &1483272712742292
 GameObject:
-  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 4310328889500844}
-  - 111: {fileID: 111450099967195673}
-  - 114: {fileID: 114257419260971430}
+  - component: {fileID: 4153939954909763}
+  - component: {fileID: 111049095677088776}
+  - component: {fileID: 114865484687997408}
   m_Layer: 0
   m_Name: swordlighting_m_02_pfb
   m_TagString: Untagged
@@ -29,58 +28,16 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4310328889500844
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1383706817246107}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 4917091581677570}
-  m_Father: {fileID: 0}
---- !u!111 &111450099967195673
-Animation:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1383706817246107}
-  m_Enabled: 1
-  m_Animation: {fileID: 7400000, guid: bc877f43e40cb1f43adb99de8be92747, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: bc877f43e40cb1f43adb99de8be92747, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 0
-  m_AnimatePhysics: 0
-  m_CullingType: 1
-  m_UserAABB:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0, y: 0, z: 0}
---- !u!114 &114257419260971430
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1383706817246107}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6084943d27929024392b5d6ce81e6f98, type: 3}
-  m_Name:
-  animationname: sword_skill_2
-  frame: 3
---- !u!1 &1181151846647209
+--- !u!1 &1938990204534176
 GameObject:
-  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 4917091581677570}
-  - 33: {fileID: 33506778186225515}
-  - 23: {fileID: 23897451314766006}
+  - component: {fileID: 4673914673991888}
+  - component: {fileID: 33993264049865911}
+  - component: {fileID: 23822165281392946}
   m_Layer: 0
   m_Name: objlight_01_03
   m_TagString: Untagged
@@ -88,39 +45,100 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4917091581677570
+--- !u!4 &4153939954909763
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1181151846647209}
-  m_LocalRotation: {x: 1.4901163E-08, y: 1.1102232E-16, z: 7.450581E-09, w: 1}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1483272712742292}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4673914673991888}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4673914673991888
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1938990204534176}
+  m_LocalRotation: {x: 0.000000014901163, y: 1.1102232e-16, z: 0.000000007450581,
+    w: 1}
   m_LocalPosition: {x: 0, y: 0.20036077, z: -0.0692844}
   m_LocalScale: {x: 1, y: 1.1270503, z: 1}
   m_Children: []
-  m_Father: {fileID: 4310328889500844}
---- !u!33 &33506778186225515
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1181151846647209}
-  m_Mesh: {fileID: 4300000, guid: d6a3cf579100c8147974efff42a37c82, type: 2}
---- !u!23 &23897451314766006
+  m_Father: {fileID: 4153939954909763}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &23822165281392946
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1181151846647209}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1938990204534176}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 8c98e8389ee8b2040b5b434e33d723c3, type: 2}
-  m_SubsetIndices: []
+  - {fileID: 2100000, guid: dfa8f74c1212fa34888ef17ad340fd66, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &33993264049865911
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1938990204534176}
+  m_Mesh: {fileID: 4300000, guid: 4241bc03ff0ba774ba967d02f0b4bedc, type: 2}
+--- !u!111 &111049095677088776
+Animation:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1483272712742292}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: b1f160580d09d534697662eb40812d8c, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: b1f160580d09d534697662eb40812d8c, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 1
+--- !u!114 &114865484687997408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1483272712742292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5346ea0c76d840b7ff5ff7607ea31f4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationname: sword_skill_2
+  frame: 3

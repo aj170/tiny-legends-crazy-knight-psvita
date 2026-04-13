@@ -2,39 +2,39 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!1001 &100100000
 Prefab:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1443249063485330}
+  m_RootGameObject: {fileID: 1379041838940834}
   m_IsPrefabParent: 1
---- !u!1 &1443249063485330
+--- !u!1 &1379041838940834
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4195574834893138}
-  - component: {fileID: 82555804402746357}
-  - component: {fileID: 114898916116150753}
-  - component: {fileID: 114605250516771448}
+  - component: {fileID: 4453466624071768}
+  - component: {fileID: 82854243298963522}
+  - component: {fileID: 114508127540619028}
+  - component: {fileID: 114991789359856001}
   m_Layer: 0
-  m_Name: vo_bat_death01
+  m_Name: Vo_Bat_Death01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4195574834893138
+--- !u!4 &4453466624071768
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1443249063485330}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1379041838940834}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -42,12 +42,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &82555804402746357
+--- !u!82 &82854243298963522
 AudioSource:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1443249063485330}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1379041838940834}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -128,34 +128,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &114605250516771448
+--- !u!114 &114508127540619028
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1443249063485330}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1379041838940834}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f1520e390f13ad4bb40009d3a0dedcf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxCount: 1
-  deltaTime: 0.2
---- !u!114 &114898916116150753
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1443249063485330}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30dd24c2edf8f5c4cbba960ea7b16ffd, type: 3}
+  m_Script: {fileID: 11500000, guid: e3582d1c7d4196262b5c70e29e7c0f4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isSfx: 1
   audioClips:
-  - {fileID: 8300000, guid: d665b5745af6acd43ae479e932f4f99e, type: 3}
-  - {fileID: 8300000, guid: ce63b16d08edb614e919228e91c9dffe, type: 3}
+  - {fileID: 8300000, guid: e32ea11c9c62a7240aa7cb75c29477f3, type: 3}
+  - {fileID: 8300000, guid: d39a5c01caf90f14388c568244d5ce76, type: 3}
   probability: []
   volumOffset: 0.1
   pitchOffset: 0
@@ -164,3 +151,16 @@ MonoBehaviour:
   delayTime: 0
   autoDestroy: 0
   randomStartPosition: 0
+--- !u!114 &114991789359856001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1379041838940834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64a37e59c578bc44061723623ff7d0f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxCount: 1
+  deltaTime: 0.2

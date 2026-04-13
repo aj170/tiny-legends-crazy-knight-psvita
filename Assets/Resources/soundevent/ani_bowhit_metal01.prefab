@@ -2,38 +2,38 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!1001 &100100000
 Prefab:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1408503432320024}
+  m_RootGameObject: {fileID: 1463260236254680}
   m_IsPrefabParent: 1
---- !u!1 &1408503432320024
+--- !u!1 &1463260236254680
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4314128771708041}
-  - component: {fileID: 82011768265369791}
-  - component: {fileID: 114259768080881067}
+  - component: {fileID: 4871245817715780}
+  - component: {fileID: 82441940899092646}
+  - component: {fileID: 114876358597940388}
   m_Layer: 0
-  m_Name: ani_bowhit_metal01
+  m_Name: Ani_BowHit_Metal01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4314128771708041
+--- !u!4 &4871245817715780
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1408503432320024}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1463260236254680}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -41,12 +41,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &82011768265369791
+--- !u!82 &82441940899092646
 AudioSource:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1408503432320024}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1463260236254680}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -127,22 +127,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &114259768080881067
+--- !u!114 &114876358597940388
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1408503432320024}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1463260236254680}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30dd24c2edf8f5c4cbba960ea7b16ffd, type: 3}
+  m_Script: {fileID: 11500000, guid: e3582d1c7d4196262b5c70e29e7c0f4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isSfx: 1
   audioClips:
-  - {fileID: 8300000, guid: eae6dfe51ef956443b5d0b366021bf25, type: 3}
-  - {fileID: 8300000, guid: 96ab7eca03187494e99ac200cdef9b25, type: 3}
-  - {fileID: 8300000, guid: aee54514bbaf25d4cba272c9779d8fb5, type: 3}
+  - {fileID: 8300000, guid: ca274dd56ec5f6641bc18269358a6d15, type: 3}
+  - {fileID: 8300000, guid: b7f8104e95d18d9479b820872622fbf0, type: 3}
+  - {fileID: 8300000, guid: cc3d96fbd1201f4408fbd783b6ad5109, type: 3}
   probability: []
   volumOffset: 0.1
   pitchOffset: 0

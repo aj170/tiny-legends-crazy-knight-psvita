@@ -2,28 +2,27 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!1001 &100100000
 Prefab:
+  m_ObjectHideFlags: 1
   serializedVersion: 2
-  m_ObjectHideFlags: 0
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1595750596503282}
+  m_RootGameObject: {fileID: 1695957412941284}
   m_IsPrefabParent: 1
-  m_IsExploded: 0
---- !u!1 &1595750596503282
+--- !u!1 &1695957412941284
 GameObject:
-  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 4753096176717993}
-  - 111: {fileID: 111272512694024721}
-  - 114: {fileID: 114069268792475868}
-  - 114: {fileID: 114273220192491830}
-  - 114: {fileID: 114200684827174950}
+  - component: {fileID: 4450700381112709}
+  - component: {fileID: 111369278892431612}
+  - component: {fileID: 114437606015696800}
+  - component: {fileID: 114200881773191971}
+  - component: {fileID: 114178005959110122}
   m_Layer: 0
   m_Name: attack_01
   m_TagString: Untagged
@@ -31,83 +30,16 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4753096176717993
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1595750596503282}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
-  m_Children:
-  - {fileID: 4792095997167540}
-  m_Father: {fileID: 0}
---- !u!111 &111272512694024721
-Animation:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1595750596503282}
-  m_Enabled: 1
-  m_Animation: {fileID: 7400000, guid: dd855d6dfd3609d41b54f4ab90b19be2, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: dd855d6dfd3609d41b54f4ab90b19be2, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 0
-  m_AnimatePhysics: 0
-  m_CullingType: 1
-  m_UserAABB:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0, y: 0, z: 0}
---- !u!114 &114069268792475868
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1595750596503282}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75bfe786bcef9654385fc69d93c0e27d, type: 3}
-  m_Name:
-  timeTosleep: 0.15
-  animationname: attack_01
-  speed: 1
-  objs:
-  - {fileID: 1637886751172163}
---- !u!114 &114273220192491830
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1595750596503282}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18000242235ba3e46b0c8bc1a88d1fc9, type: 3}
-  m_Name:
-  useAuidoEvent: 1
---- !u!114 &114200684827174950
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1595750596503282}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19a13449cc46aff4b9860c7505a63a91, type: 3}
-  m_Name:
-  audioname: Multi_SwordHitFlesh01
---- !u!1 &1637886751172163
+--- !u!1 &1869216119952859
 GameObject:
-  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 4792095997167540}
-  - 33: {fileID: 33088131779736978}
-  - 23: {fileID: 23570743243460117}
+  - component: {fileID: 4241993151319997}
+  - component: {fileID: 33902977010777390}
+  - component: {fileID: 23364125567099074}
   m_Layer: 0
   m_Name: Plane01
   m_TagString: Untagged
@@ -115,39 +47,126 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4792095997167540
+--- !u!4 &4241993151319997
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1637886751172163}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1869216119952859}
   m_LocalRotation: {x: 0, y: -0.21643962, z: 0, w: -0.976296}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4753096176717993}
---- !u!33 &33088131779736978
-MeshFilter:
+  m_Father: {fileID: 4450700381112709}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4450700381112709
+Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1637886751172163}
-  m_Mesh: {fileID: 4300000, guid: 7e4c423a045e4684b9febd5881c86e35, type: 2}
---- !u!23 &23570743243460117
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1695957412941284}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_Children:
+  - {fileID: 4241993151319997}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &23364125567099074
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1637886751172163}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1869216119952859}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 24f68c861a1b89e4ba4d3fececf0bd14, type: 2}
-  m_SubsetIndices: []
+  - {fileID: 2100000, guid: 69b2b96dd04d2cd4785c2a0240dd4950, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &33902977010777390
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1869216119952859}
+  m_Mesh: {fileID: 4300000, guid: 1ae47e2a93a0513418bc9cb7e8303469, type: 2}
+--- !u!111 &111369278892431612
+Animation:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1695957412941284}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 2d38a46ff8c32cb4da95bd635a3ff924, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 2d38a46ff8c32cb4da95bd635a3ff924, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 1
+--- !u!114 &114178005959110122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1695957412941284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 925d77a0e5786d43a21fe7b14320885c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioname: Multi_SwordHitFlesh01
+--- !u!114 &114200881773191971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1695957412941284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f85e65ad005557c46c901616a47b440, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useAuidoEvent: 1
+--- !u!114 &114437606015696800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1695957412941284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72807753a7602cbcc94749d469612385, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeTosleep: 0.15
+  animationname: attack_01
+  speed: 1
+  objs:
+  - {fileID: 1869216119952859}

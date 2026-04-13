@@ -16,7 +16,6 @@ public class NetworkClassToObject
 
 	public static RoomSettingInfo RoomSettingFromJsonObject(ISFSObject obj)
 	{
-		//Discarded unreachable code: IL_0033, IL_0046
 		try
 		{
 			RoomSettingInfo roomSettingInfo = new RoomSettingInfo();
@@ -47,7 +46,6 @@ public class NetworkClassToObject
 
 	public static PlayerSettingInfo PlayerSettingFromJsonObject(ISFSObject obj)
 	{
-		//Discarded unreachable code: IL_005a, IL_006d
 		try
 		{
 			PlayerSettingInfo playerSettingInfo = new PlayerSettingInfo();
@@ -78,7 +76,6 @@ public class NetworkClassToObject
 
 	public static PlayerStatusInfo PlayerStatusFromJsonObject(ISFSObject obj)
 	{
-		//Discarded unreachable code: IL_0033, IL_0046
 		try
 		{
 			PlayerStatusInfo playerStatusInfo = new PlayerStatusInfo();
@@ -107,7 +104,6 @@ public class NetworkClassToObject
 
 	public static MonsterUpdateInfo MonsterUpdateFromJsonObject(ISFSObject obj)
 	{
-		//Discarded unreachable code: IL_0040, IL_0053
 		try
 		{
 			MonsterUpdateInfo monsterUpdateInfo = new MonsterUpdateInfo();
@@ -137,7 +133,6 @@ public class NetworkClassToObject
 
 	public static TransformInfo TransformFromJsonObject(ISFSObject obj)
 	{
-		//Discarded unreachable code: IL_0038, IL_004b
 		try
 		{
 			TransformInfo transformInfo = new TransformInfo();
@@ -165,7 +160,6 @@ public class NetworkClassToObject
 
 	public static MonsterStatusInfo MonsterStatusFromJsonObject(ISFSObject obj)
 	{
-		//Discarded unreachable code: IL_0033, IL_0046
 		try
 		{
 			MonsterStatusInfo monsterStatusInfo = new MonsterStatusInfo();
@@ -193,7 +187,6 @@ public class NetworkClassToObject
 
 	public static BossStatusInfo BossStatusFromJsonObject(ISFSObject obj)
 	{
-		//Discarded unreachable code: IL_0033, IL_0046
 		try
 		{
 			BossStatusInfo bossStatusInfo = new BossStatusInfo();
@@ -222,7 +215,6 @@ public class NetworkClassToObject
 
 	public static BossSkillInfo BossSkillFromJsonObject(ISFSObject obj)
 	{
-		//Discarded unreachable code: IL_0040, IL_0053
 		try
 		{
 			BossSkillInfo bossSkillInfo = new BossSkillInfo();
@@ -251,7 +243,6 @@ public class NetworkClassToObject
 
 	public static MonsterHurtInfo MonsterHurtFromJsonObject(ISFSObject obj)
 	{
-		//Discarded unreachable code: IL_0033, IL_0046
 		try
 		{
 			MonsterHurtInfo monsterHurtInfo = new MonsterHurtInfo();
@@ -278,7 +269,6 @@ public class NetworkClassToObject
 
 	public static ItemInfo ItemFromJsonObject(ISFSObject obj)
 	{
-		//Discarded unreachable code: IL_0026, IL_0039
 		try
 		{
 			ItemInfo itemInfo = new ItemInfo();

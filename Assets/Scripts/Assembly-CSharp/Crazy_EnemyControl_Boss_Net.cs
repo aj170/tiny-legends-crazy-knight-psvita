@@ -1,22 +1,10 @@
 using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using TNetSdk;
 using UnityEngine;
 
 public class Crazy_EnemyControl_Boss_Net : Crazy_EnemyControl_Boss
 {
-	[CompilerGenerated]
-	private sealed class _003CNetworkUpdateStatus_003Ec__AnonStorey16
-	{
-		internal int id;
-
-		internal bool _003C_003Em__9(Crazy_Boss_Status t)
-		{
-			return t.id == id;
-		}
-	}
-
 	public NetworkTransformSender transsend;
 
 	public NetworkTransformReceiver transreceiver;
@@ -247,9 +235,7 @@ public class Crazy_EnemyControl_Boss_Net : Crazy_EnemyControl_Boss
 
 	protected void NetworkUpdateStatus(int id)
 	{
-		_003CNetworkUpdateStatus_003Ec__AnonStorey16 _003CNetworkUpdateStatus_003Ec__AnonStorey = new _003CNetworkUpdateStatus_003Ec__AnonStorey16();
-		_003CNetworkUpdateStatus_003Ec__AnonStorey.id = id;
-		cur_status = m_status.Find(_003CNetworkUpdateStatus_003Ec__AnonStorey._003C_003Em__9);
+		cur_status = m_status.Find((Crazy_Boss_Status t) => t.id == id);
 		updateStatusData();
 	}
 

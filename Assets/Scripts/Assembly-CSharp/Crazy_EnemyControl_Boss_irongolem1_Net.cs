@@ -1,6 +1,4 @@
-using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using TNetSdk;
 using UnityEngine;
 
@@ -48,9 +46,6 @@ public class Crazy_EnemyControl_Boss_irongolem1_Net : Crazy_EnemyControl_Boss_Ne
 
 	private float cycloneskilllasttime;
 
-	[CompilerGenerated]
-	private static Comparison<TNetUser> _003C_003Ef__am_0024cache15;
-
 	private void Start()
 	{
 		preStart();
@@ -62,19 +57,19 @@ public class Crazy_EnemyControl_Boss_irongolem1_Net : Crazy_EnemyControl_Boss_Ne
 		base.GetComponent<Animation>()["Attack03_03_merge"].wrapMode = WrapMode.ClampForever;
 		base.GetComponent<Animation>()["Forward01_merge"].wrapMode = WrapMode.Loop;
 		base.GetComponent<Animation>()["Death01_merge"].wrapMode = WrapMode.ClampForever;
-		cyclonebig = UnityEngine.Object.Instantiate(Resources.Load("Prefabs/BossSkillNew/Cyclone/CycloneBig_pfb")) as GameObject;
+		cyclonebig = Object.Instantiate(Resources.Load("Prefabs/BossSkillNew/Cyclone/CycloneBig_pfb")) as GameObject;
 		cyclonebig.transform.parent = base.gameObject.transform;
 		cyclonebig.transform.localPosition = Vector3.zero;
 		cyclonebig.transform.localEulerAngles = Vector3.zero;
-		fallstoretrigger = UnityEngine.Object.Instantiate(Resources.Load("Prefabs/BossSkillNew/FallStore/FallStoreTrigger_pfb")) as GameObject;
+		fallstoretrigger = Object.Instantiate(Resources.Load("Prefabs/BossSkillNew/FallStore/FallStoreTrigger_pfb")) as GameObject;
 		fallstoretrigger.transform.parent = base.gameObject.transform;
 		fallstoretrigger.transform.localPosition = Vector3.zero;
 		fallstoretrigger.transform.localEulerAngles = Vector3.zero;
-		shakewave = UnityEngine.Object.Instantiate(Resources.Load("Prefabs/BossSkillNew/ShakeWave/ShakeWave_pfb")) as GameObject;
+		shakewave = Object.Instantiate(Resources.Load("Prefabs/BossSkillNew/ShakeWave/ShakeWave_pfb")) as GameObject;
 		shakewave.transform.parent = base.gameObject.transform;
 		shakewave.transform.localPosition = Vector3.zero;
 		shakewave.transform.localEulerAngles = Vector3.zero;
-		appear = UnityEngine.Object.Instantiate(Resources.Load("Prefabs/BossSkillNew/Appear/Appear_pfb")) as GameObject;
+		appear = Object.Instantiate(Resources.Load("Prefabs/BossSkillNew/Appear/Appear_pfb")) as GameObject;
 		appear.transform.parent = base.gameObject.transform;
 		appear.transform.localPosition = Vector3.zero;
 		appear.transform.localEulerAngles = Vector3.zero;
@@ -86,7 +81,7 @@ public class Crazy_EnemyControl_Boss_irongolem1_Net : Crazy_EnemyControl_Boss_Ne
 		Appear();
 	}
 
-	protected void EventAnimation(AnimationClip ani, int frame, string functionname, int intP = 0, float floatP = 0f, string stringP = "", UnityEngine.Object objectP = null)
+	protected void EventAnimation(AnimationClip ani, int frame, string functionname, int intP = 0, float floatP = 0f, string stringP = "", Object objectP = null)
 	{
 		Crazy_Global.EventAnimation(ani, (float)frame * objectsamplerate, functionname, intP, floatP, stringP, objectP);
 	}
@@ -186,7 +181,7 @@ public class Crazy_EnemyControl_Boss_irongolem1_Net : Crazy_EnemyControl_Boss_Ne
 			if (outalertmove)
 			{
 				outalertmove = false;
-				outalertMoveDir = new Vector3(UnityEngine.Random.Range(-100, 100), 0f, UnityEngine.Random.Range(-100, 100));
+				outalertMoveDir = new Vector3(Random.Range(-100, 100), 0f, Random.Range(-100, 100));
 				outalertMoveDir.Normalize();
 			}
 			curMoveDir = outalertMoveDir;
@@ -290,7 +285,7 @@ public class Crazy_EnemyControl_Boss_irongolem1_Net : Crazy_EnemyControl_Boss_Ne
 
 	protected void FallStoreOnce(Vector3 position)
 	{
-		GameObject gameObject = UnityEngine.Object.Instantiate(fallstore.gameObject) as GameObject;
+		GameObject gameObject = Object.Instantiate(fallstore.gameObject) as GameObject;
 		gameObject.transform.position = position;
 		gameObject.GetComponent<Crazy_Fallen>().SetTarget(target);
 		gameObject.SendMessage("Trigger", SendMessageOptions.DontRequireReceiver);
@@ -348,11 +343,7 @@ public class Crazy_EnemyControl_Boss_irongolem1_Net : Crazy_EnemyControl_Boss_Ne
 				list.Add(key);
 			}
 			list.Add(TNetManager.Connection.Myself);
-			if (_003C_003Ef__am_0024cache15 == null)
-			{
-				_003C_003Ef__am_0024cache15 = _003CFallStore_003Em__A;
-			}
-			list.Sort(_003C_003Ef__am_0024cache15);
+			list.Sort((TNetUser a, TNetUser b) => a.Id.CompareTo(b.Id));
 			foreach (TNetUser item in list)
 			{
 				if (item == TNetManager.Connection.Myself)
@@ -390,7 +381,7 @@ public class Crazy_EnemyControl_Boss_irongolem1_Net : Crazy_EnemyControl_Boss_Ne
 				cyclone.moveDir.Normalize();
 				cyclone.TargetList.Clear();
 				cyclone.TargetList.Add(target);
-				UnityEngine.Object.Instantiate(cyclone.gameObject, base.transform.position, base.transform.rotation);
+				Object.Instantiate(cyclone.gameObject, base.transform.position, base.transform.rotation);
 			}
 		}
 	}
@@ -541,11 +532,5 @@ public class Crazy_EnemyControl_Boss_irongolem1_Net : Crazy_EnemyControl_Boss_Ne
 	public override Renderer[] FindMeshRenderer()
 	{
 		return new Renderer[1] { base.gameObject.transform.Find("body").gameObject.GetComponent<Renderer>() };
-	}
-
-	[CompilerGenerated]
-	private static int _003CFallStore_003Em__A(TNetUser a, TNetUser b)
-	{
-		return a.Id.CompareTo(b.Id);
 	}
 }

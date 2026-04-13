@@ -2,38 +2,38 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!1001 &100100000
 Prefab:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1614589998242689}
+  m_RootGameObject: {fileID: 1255306654852900}
   m_IsPrefabParent: 1
---- !u!1 &1614589998242689
+--- !u!1 &1255306654852900
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4178369125714108}
-  - component: {fileID: 82047171689772287}
-  - component: {fileID: 114104882305606544}
+  - component: {fileID: 4323811132964466}
+  - component: {fileID: 82324857824040466}
+  - component: {fileID: 114371159025552674}
   m_Layer: 0
-  m_Name: ani_axe_swish_light01
+  m_Name: Ani_Axe_Swish_Light01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4178369125714108
+--- !u!4 &4323811132964466
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1614589998242689}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1255306654852900}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -41,12 +41,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &82047171689772287
+--- !u!82 &82324857824040466
 AudioSource:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1614589998242689}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1255306654852900}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -127,22 +127,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &114104882305606544
+--- !u!114 &114371159025552674
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1614589998242689}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1255306654852900}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30dd24c2edf8f5c4cbba960ea7b16ffd, type: 3}
+  m_Script: {fileID: 11500000, guid: e3582d1c7d4196262b5c70e29e7c0f4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isSfx: 1
   audioClips:
-  - {fileID: 8300000, guid: 2b7dd768669319c47b9a6e8d1e121be0, type: 3}
-  - {fileID: 8300000, guid: b59c9de6084db824486cd5752d050e7e, type: 3}
-  - {fileID: 8300000, guid: fb10cdbb2cd250c4ba5cc72ad49e6cbb, type: 3}
+  - {fileID: 8300000, guid: 5d4e1d1c234ce35439d31392c66042d4, type: 3}
+  - {fileID: 8300000, guid: d68766509754c10419b630eabbbc2038, type: 3}
+  - {fileID: 8300000, guid: 6eb8671ea08860a4ebd125489275a648, type: 3}
   probability: []
   volumOffset: 0.1
   pitchOffset: 0

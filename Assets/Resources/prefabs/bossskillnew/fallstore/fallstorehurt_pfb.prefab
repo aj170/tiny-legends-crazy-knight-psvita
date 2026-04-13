@@ -2,38 +2,38 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!1001 &100100000
 Prefab:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1934419339367551}
+  m_RootGameObject: {fileID: 1330109634124552}
   m_IsPrefabParent: 1
---- !u!1 &1934419339367551
+--- !u!1 &1330109634124552
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4778868249449057}
-  - component: {fileID: 114341915417886252}
-  - component: {fileID: 114929622873638640}
+  - component: {fileID: 4904054891694511}
+  - component: {fileID: 114658903088442768}
+  - component: {fileID: 114111617123437617}
   m_Layer: 0
-  m_Name: fallstorehurt_pfb
+  m_Name: FallStoreHurt_pfb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4778868249449057
+--- !u!4 &4904054891694511
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1934419339367551}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1330109634124552}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -41,27 +41,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114341915417886252
+--- !u!114 &114111617123437617
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1934419339367551}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1330109634124552}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7187fa75d8eb7004e95d073aa3e45023, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  radius: 4
---- !u!114 &114929622873638640
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1934419339367551}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75190fe5f17dd47469b99fd1908f40f7, type: 3}
+  m_Script: {fileID: 11500000, guid: 5eb62162bd12f51a79427903fd787e95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   timeToDestroy: 1
+--- !u!114 &114658903088442768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1330109634124552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8a1ce6d30341a7f2104f8f6179af735, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 4

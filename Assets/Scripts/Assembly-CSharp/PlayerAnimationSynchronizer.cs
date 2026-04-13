@@ -1,12 +1,10 @@
-using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using UnityEngine;
 
 [RequireComponent(typeof(TAudioController))]
 public class PlayerAnimationSynchronizer : AnimationSynchronizer
 {
-	public float animationspeedmodify = 0.7f;
+	public float animationspeedmodify0 = 0.7f;
 
 	protected Crazy_Weapon weapon;
 
@@ -78,15 +76,6 @@ public class PlayerAnimationSynchronizer : AnimationSynchronizer
 
 	private Dictionary<Material, Color> player_color = new Dictionary<Material, Color>();
 
-	[CompilerGenerated]
-	private static Converter<Component, Renderer> _003C_003Ef__am_0024cache24;
-
-	[CompilerGenerated]
-	private static Converter<Component, Renderer> _003C_003Ef__am_0024cache25;
-
-	[CompilerGenerated]
-	private static Converter<Component, Renderer> _003C_003Ef__am_0024cache26;
-
 	public void Awake()
 	{
 		InitAnimations();
@@ -104,7 +93,7 @@ public class PlayerAnimationSynchronizer : AnimationSynchronizer
 
 	protected virtual bool CheckAnimation()
 	{
-		return Mathf.Abs(base.GetComponent<Animation>()["Attack01_Sword01_merge"].speed - 1f * animationspeedmodify) <= 0.01f;
+		return Mathf.Abs(base.GetComponent<Animation>()["Attack01_Sword01_merge"].speed - 1f * animationspeedmodify0) <= 0.01f;
 	}
 
 	protected virtual void ModifyAnimation()
@@ -182,21 +171,21 @@ public class PlayerAnimationSynchronizer : AnimationSynchronizer
 			base.GetComponent<Animation>()["Idle_Hammer01_celebrate01_merge"].layer = 5;
 			base.GetComponent<Animation>()["Idle_Sword01_celebrate01_merge"].layer = 5;
 			base.GetComponent<Animation>()["Idle_Bow01_celebrate01_merge"].layer = 5;
-			base.GetComponent<Animation>()["Attack01_Sword01_merge"].speed = 1f * animationspeedmodify;
-			base.GetComponent<Animation>()["Attack02_Sword01_merge"].speed = 1f * animationspeedmodify;
-			base.GetComponent<Animation>()["Attack03_Sword01_merge"].speed = 1f * animationspeedmodify;
-			base.GetComponent<Animation>()["Attack04_Sword01_merge"].speed = 1f * animationspeedmodify;
-			base.GetComponent<Animation>()["Skill01_Sword01_merge"].speed = 1f * animationspeedmodify;
-			base.GetComponent<Animation>()["Attack01_Hammer01_merge"].speed = 1f * animationspeedmodify;
-			base.GetComponent<Animation>()["Attack02_Hammer01_merge"].speed = 1f * animationspeedmodify;
-			base.GetComponent<Animation>()["Attack03_Hammer01_merge"].speed = 1f * animationspeedmodify;
-			base.GetComponent<Animation>()["Attack04_Hammer01_merge"].speed = 1f * animationspeedmodify;
-			base.GetComponent<Animation>()["Skill01_Hammer01_merge"].speed = 1f * animationspeedmodify;
-			base.GetComponent<Animation>()["Attack01_Axe01_merge"].speed = 1f * animationspeedmodify;
-			base.GetComponent<Animation>()["Attack02_Axe01_merge"].speed = 1f * animationspeedmodify;
-			base.GetComponent<Animation>()["Attack03_Axe01_merge"].speed = 1f * animationspeedmodify;
-			base.GetComponent<Animation>()["Attack04_Axe01_merge"].speed = 1f * animationspeedmodify;
-			base.GetComponent<Animation>()["Skill01_Axe01_merge"].speed = 1f * animationspeedmodify;
+			base.GetComponent<Animation>()["Attack01_Sword01_merge"].speed = 1f * animationspeedmodify0;
+			base.GetComponent<Animation>()["Attack02_Sword01_merge"].speed = 1f * animationspeedmodify0;
+			base.GetComponent<Animation>()["Attack03_Sword01_merge"].speed = 1f * animationspeedmodify0;
+			base.GetComponent<Animation>()["Attack04_Sword01_merge"].speed = 1f * animationspeedmodify0;
+			base.GetComponent<Animation>()["Skill01_Sword01_merge"].speed = 1f * animationspeedmodify0;
+			base.GetComponent<Animation>()["Attack01_Hammer01_merge"].speed = 1f * animationspeedmodify0;
+			base.GetComponent<Animation>()["Attack02_Hammer01_merge"].speed = 1f * animationspeedmodify0;
+			base.GetComponent<Animation>()["Attack03_Hammer01_merge"].speed = 1f * animationspeedmodify0;
+			base.GetComponent<Animation>()["Attack04_Hammer01_merge"].speed = 1f * animationspeedmodify0;
+			base.GetComponent<Animation>()["Skill01_Hammer01_merge"].speed = 1f * animationspeedmodify0;
+			base.GetComponent<Animation>()["Attack01_Axe01_merge"].speed = 1f * animationspeedmodify0;
+			base.GetComponent<Animation>()["Attack02_Axe01_merge"].speed = 1f * animationspeedmodify0;
+			base.GetComponent<Animation>()["Attack03_Axe01_merge"].speed = 1f * animationspeedmodify0;
+			base.GetComponent<Animation>()["Attack04_Axe01_merge"].speed = 1f * animationspeedmodify0;
+			base.GetComponent<Animation>()["Skill01_Axe01_merge"].speed = 1f * animationspeedmodify0;
 			AddAnimationEvent();
 		}
 	}
@@ -410,13 +399,8 @@ public class PlayerAnimationSynchronizer : AnimationSynchronizer
 				attack_effect_Obj[j].transform.localPosition = Vector3.zero;
 				attack_effect_Obj[j].transform.parent = RootNode.transform;
 				List<Component> list = new List<Component>(attack_effect_Obj[j].GetComponentsInChildren(typeof(Renderer)));
-				List<Component> list4 = list;
-				if (_003C_003Ef__am_0024cache24 == null)
-				{
-					_003C_003Ef__am_0024cache24 = _003CInitWeaponLight_003Em__D;
-				}
-				List<Renderer> list3 = list4.ConvertAll(_003C_003Ef__am_0024cache24);
-				foreach (Renderer item in list3)
+				List<Renderer> list2 = list.ConvertAll((Component c) => (Renderer)c);
+				foreach (Renderer item in list2)
 				{
 					Color color2 = item.material.GetColor("_TintColor");
 					color2.a = 0f;
@@ -435,13 +419,8 @@ public class PlayerAnimationSynchronizer : AnimationSynchronizer
 				attack_effect_Obj[k].transform.localPosition = Vector3.zero;
 				attack_effect_Obj[k].transform.parent = RootNode.transform;
 				List<Component> list = new List<Component>(attack_effect_Obj[k].GetComponentsInChildren(typeof(Renderer)));
-				List<Component> list5 = list;
-				if (_003C_003Ef__am_0024cache25 == null)
-				{
-					_003C_003Ef__am_0024cache25 = _003CInitWeaponLight_003Em__E;
-				}
-				List<Renderer> list3 = list5.ConvertAll(_003C_003Ef__am_0024cache25);
-				foreach (Renderer item2 in list3)
+				List<Renderer> list2 = list.ConvertAll((Component c) => (Renderer)c);
+				foreach (Renderer item2 in list2)
 				{
 					Color color3 = item2.material.GetColor("_TintColor");
 					color3.a = 0f;
@@ -460,13 +439,8 @@ public class PlayerAnimationSynchronizer : AnimationSynchronizer
 				attack_effect_Obj[i].transform.localPosition = Vector3.zero;
 				attack_effect_Obj[i].transform.parent = RootNode.transform;
 				List<Component> list = new List<Component>(attack_effect_Obj[i].GetComponentsInChildren(typeof(Renderer)));
-				List<Component> list2 = list;
-				if (_003C_003Ef__am_0024cache26 == null)
-				{
-					_003C_003Ef__am_0024cache26 = _003CInitWeaponLight_003Em__F;
-				}
-				List<Renderer> list3 = list2.ConvertAll(_003C_003Ef__am_0024cache26);
-				foreach (Renderer item3 in list3)
+				List<Renderer> list2 = list.ConvertAll((Component c) => (Renderer)c);
+				foreach (Renderer item3 in list2)
 				{
 					Color color = item3.material.GetColor("_TintColor");
 					color.a = 0f;
@@ -606,14 +580,14 @@ public class PlayerAnimationSynchronizer : AnimationSynchronizer
 		}
 	}
 
-	protected void EventAnimation(AnimationClip ani, int frame, string functionname, int intP = 0, float floatP = 0f, string stringP = "", UnityEngine.Object objectP = null)
+	protected void EventAnimation(AnimationClip ani, int frame, string functionname, int intP = 0, float floatP = 0f, string stringP = "", Object objectP = null)
 	{
 		Crazy_Global.EventAnimation(ani, (float)frame * playersamplerate, functionname, intP, floatP, stringP, objectP);
 	}
 
 	public GameObject GetArrow(Transform position)
 	{
-		return UnityEngine.Object.Instantiate(Resources.Load("Prefabs/bowarrow/bowarrow_pfb_image"), position.position, position.rotation) as GameObject;
+		return Object.Instantiate(Resources.Load("Prefabs/bowarrow/bowarrow_pfb_image"), position.position, position.rotation) as GameObject;
 	}
 
 	public void PlayArrowEffect()
@@ -902,7 +876,7 @@ public class PlayerAnimationSynchronizer : AnimationSynchronizer
 			}
 			else
 			{
-				float rate_r = UnityEngine.Random.Range(0, 2);
+				float rate_r = Random.Range(0, 2);
 				SetModelColorRate(rate_r, 0f, 0f);
 			}
 		}
@@ -950,23 +924,5 @@ public class PlayerAnimationSynchronizer : AnimationSynchronizer
 		{
 			lastattackingtime += Time.deltaTime;
 		}
-	}
-
-	[CompilerGenerated]
-	private static Renderer _003CInitWeaponLight_003Em__D(Component c)
-	{
-		return (Renderer)c;
-	}
-
-	[CompilerGenerated]
-	private static Renderer _003CInitWeaponLight_003Em__E(Component c)
-	{
-		return (Renderer)c;
-	}
-
-	[CompilerGenerated]
-	private static Renderer _003CInitWeaponLight_003Em__F(Component c)
-	{
-		return (Renderer)c;
 	}
 }

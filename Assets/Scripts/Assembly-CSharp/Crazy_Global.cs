@@ -353,30 +353,30 @@ public class Crazy_Global
 		Crazy_Process activeProcess = GetActiveProcess();
 		if (activeProcess != null && activeProcess.action != -1 && !Crazy_Data.CurData().GetDoAction())
 		{
-			switch (activeProcess.action)
+			switch ((CrazyProcessAction)activeProcess.action)
 			{
-			case 1:
+			case CrazyProcessAction.WeaponIcon:
 				Crazy_Data.CurData().SetWeaponIcon(true);
 				break;
-			case 2:
+			case CrazyProcessAction.MaxStage3:
 				Crazy_Data.CurData().SetMinMaxStage(2, 4);
 				break;
-			case 3:
+			case CrazyProcessAction.MaxStage6:
 				Crazy_Data.CurData().SetMinMaxStage(4, 6);
 				break;
-			case 4:
+			case CrazyProcessAction.MixMonster:
 				Crazy_Data.CurData().SetMixMonster(true);
 				break;
-			case 5:
+			case CrazyProcessAction.HeroIcon:
 				Crazy_Data.CurData().SetHeroIcon(true);
 				break;
-			case 6:
+			case CrazyProcessAction.Ranged:
 				Crazy_Data.CurData().SetRanged(true);
 				break;
-			case 7:
+			case CrazyProcessAction.Net:
 				Crazy_Data.CurData().SetNet(true);
 				break;
-			case 8:
+			case CrazyProcessAction.ShowProp:
 				Crazy_Data.CurData().SetShowPropPanel(true);
 				break;
 			}

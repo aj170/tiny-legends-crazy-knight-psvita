@@ -2,39 +2,39 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!1001 &100100000
 Prefab:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1001925047197727}
+  m_RootGameObject: {fileID: 1797474238531446}
   m_IsPrefabParent: 1
---- !u!1 &1001925047197727
+--- !u!1 &1797474238531446
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4286308708109988}
-  - component: {fileID: 82210964856397029}
-  - component: {fileID: 114902939005064304}
-  - component: {fileID: 114509426241914882}
+  - component: {fileID: 4327506878996026}
+  - component: {fileID: 82532311762766785}
+  - component: {fileID: 114436171371013383}
+  - component: {fileID: 114852667769204560}
   m_Layer: 0
-  m_Name: ani_swordhit_metal01
+  m_Name: Ani_SwordHit_Metal01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4286308708109988
+--- !u!4 &4327506878996026
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1001925047197727}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1797474238531446}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -42,12 +42,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &82210964856397029
+--- !u!82 &82532311762766785
 AudioSource:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1001925047197727}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1797474238531446}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -128,35 +128,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &114509426241914882
+--- !u!114 &114436171371013383
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1001925047197727}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1797474238531446}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f1520e390f13ad4bb40009d3a0dedcf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxCount: 2
-  deltaTime: 0.15
---- !u!114 &114902939005064304
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1001925047197727}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30dd24c2edf8f5c4cbba960ea7b16ffd, type: 3}
+  m_Script: {fileID: 11500000, guid: e3582d1c7d4196262b5c70e29e7c0f4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isSfx: 1
   audioClips:
-  - {fileID: 8300000, guid: bd7af73ec3649d545aafb10b43b4d8dc, type: 3}
-  - {fileID: 8300000, guid: 34be6321f52f42443903ac145394ba6e, type: 3}
-  - {fileID: 8300000, guid: b67f67cf6fd4c1b4789d60d5f1db590f, type: 3}
+  - {fileID: 8300000, guid: a00b64a1c45e8a14b910e67770ca705a, type: 3}
+  - {fileID: 8300000, guid: fada539d2496eb04aa764f380cf3a92d, type: 3}
+  - {fileID: 8300000, guid: 777cfa367b28b604a9dd17874285a0a5, type: 3}
   probability: []
   volumOffset: 0.1
   pitchOffset: 0.08
@@ -165,3 +152,16 @@ MonoBehaviour:
   delayTime: 0
   autoDestroy: 0
   randomStartPosition: 0
+--- !u!114 &114852667769204560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1797474238531446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64a37e59c578bc44061723623ff7d0f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxCount: 2
+  deltaTime: 0.15

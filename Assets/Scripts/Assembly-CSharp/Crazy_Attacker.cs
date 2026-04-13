@@ -1,20 +1,8 @@
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class Crazy_Attacker : MonoBehaviour
 {
-	[CompilerGenerated]
-	private sealed class _003CAttackJudgment_003Ec__AnonStorey11
-	{
-		internal GameObject curEnemyObj;
-
-		internal bool _003C_003Em__0(GameObject a)
-		{
-			return a == curEnemyObj;
-		}
-	}
-
 	public GameObject child;
 
 	protected Crazy_PlayerControl parent;
@@ -92,12 +80,12 @@ public class Crazy_Attacker : MonoBehaviour
 		Dictionary<int, GameObject>.KeyCollection keys = Crazy_GlobalData.enemyList.Keys;
 		foreach (int item in keys)
 		{
-			_003CAttackJudgment_003Ec__AnonStorey11 _003CAttackJudgment_003Ec__AnonStorey = new _003CAttackJudgment_003Ec__AnonStorey11();
-			if (!Crazy_GlobalData.enemyList.TryGetValue(item, out _003CAttackJudgment_003Ec__AnonStorey.curEnemyObj) || attacklist.Exists(_003CAttackJudgment_003Ec__AnonStorey._003C_003Em__0))
+			GameObject curEnemyObj;
+			if (!Crazy_GlobalData.enemyList.TryGetValue(item, out curEnemyObj) || attacklist.Exists((GameObject a) => a == curEnemyObj))
 			{
 				continue;
 			}
-			Crazy_EnemyControl crazy_EnemyControl = _003CAttackJudgment_003Ec__AnonStorey.curEnemyObj.GetComponent("Crazy_EnemyControl") as Crazy_EnemyControl;
+			Crazy_EnemyControl crazy_EnemyControl = curEnemyObj.GetComponent("Crazy_EnemyControl") as Crazy_EnemyControl;
 			if (crazy_EnemyControl.IsDie() || !crazy_EnemyControl.GetActive())
 			{
 				continue;
@@ -125,7 +113,7 @@ public class Crazy_Attacker : MonoBehaviour
 				{
 					parent.AddEnergy();
 				}
-				attacklist.Add(_003CAttackJudgment_003Ec__AnonStorey.curEnemyObj);
+				attacklist.Add(curEnemyObj);
 			}
 		}
 		Crazy_GlobalData.max_single_kill_number = Mathf.Max(Crazy_GlobalData.max_single_kill_number, num);

@@ -400,7 +400,6 @@ public class Crazy_DataCollection
 
 	private List<string> DeCodeData(string filename)
 	{
-		//Discarded unreachable code: IL_00a1
 		List<string> list = new List<string>();
 		XmlDocument xmlDocument = new XmlDocument();
 		FileStream fileStream = File.Open(filename, FileMode.Open);

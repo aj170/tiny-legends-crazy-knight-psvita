@@ -8650,25 +8650,4 @@ AnimationClip:
     m_KeepAdditionalBonesAnimation: 0
   m_EditorCurves: []
   m_EulerEditorCurves: []
-  m_Events:
-  - time: 0.05
-    functionName: PlayAudio
-    data: Vo_WarriorFemale_Hurt01
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.36666667
-    functionName: PlayAudio
-    data: Mat_BodyFall_DirtMid01
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 1.0333333
-    functionName: PlayAudio
-    data: Vo_WarriorFemale_Attack01
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
+  m_Events: []

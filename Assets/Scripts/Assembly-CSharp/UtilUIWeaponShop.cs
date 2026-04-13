@@ -3,6 +3,12 @@ using UnityEngine;
 
 public class UtilUIWeaponShop : MonoBehaviour
 {
+	public bool active
+	{
+		get { return gameObject.activeSelf; }
+		set { gameObject.SetActive(value); }
+	}
+
 	private int m_pageCount;
 
 	private int m_pageIndex = -1;

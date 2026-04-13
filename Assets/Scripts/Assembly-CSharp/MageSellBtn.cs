@@ -17,8 +17,8 @@ public class MageSellBtn : MonoBehaviour
 
 	private void Start()
 	{
-		MyGUIEventListener.Get(base.gameObject).EventHandleOnPressed += OnDiscountPress;
-		MyGUIEventListener.Get(base.gameObject).EventHandleOnReleased += OnDiscountRelease;
+		//MyGUIEventListener.Get(base.gameObject).EventHandleOnPressed += OnDiscountPress;
+		//MyGUIEventListener.Get(base.gameObject).EventHandleOnReleased += OnDiscountRelease;
 		MyGUIEventListener.Get(base.gameObject).EventHandleOnClicked += OnOpenMagePanel;
 		if (Crazy_Data.CurData().GetMageSellTime() == string.Empty || Crazy_Data.CurData().GetUnlock(Crazy_PlayerClass.Mage))
 		{

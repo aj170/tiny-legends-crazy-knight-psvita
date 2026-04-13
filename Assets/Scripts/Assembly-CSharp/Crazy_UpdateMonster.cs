@@ -375,28 +375,28 @@ public class Crazy_UpdateMonster : MonoBehaviour
 		Crazy_Monster_Template crazy_Monster_Template = null;
 		Crazy_Monster_Level crazy_Monster_Level = null;
 		int num = 0;
-		switch (cmc.id)
+		switch ((Crazy_MonsterType)cmc.id)
 		{
 		default:
 			return;
-		case 1:
+		case Crazy_MonsterType.Normal:
 			crazy_Monster_Template = Crazy_Monster_Template_Manager.GetMonsterTemplate(monster[Random.Range(0, monster.Count)]);
 			num = ((Crazy_GlobalData.cur_leveltype == Crazy_LevelType.Boss) ? Random.Range(Crazy_GlobalData.cur_level, Crazy_GlobalData.cur_level + 5) : Mathf.Max(1, Crazy_GlobalData.cur_level + Random.Range(-2, 3)));
 			crazy_Monster_Level = Crazy_Monster_Level_Manager.GetMonsterLevel(num);
 			break;
-		case 2:
+		case Crazy_MonsterType.MiddleBoss:
 			crazy_Monster_Template = Crazy_Monster_Template_Manager.GetMonsterTemplate(boss[Random.Range(0, boss.Count)]);
 			num = ((Crazy_GlobalData.cur_leveltype == Crazy_LevelType.Boss) ? Random.Range(Crazy_GlobalData.cur_level, Crazy_GlobalData.cur_level + 5) : Mathf.Max(1, Crazy_GlobalData.cur_level + Random.Range(-2, 3)));
 			crazy_Monster_Level = Crazy_Monster_Level_Manager.GetMiddleBossLevel(num);
 			break;
-		case 3:
+		case Crazy_MonsterType.Boss:
 		{
 			Crazy_Boss_Level bossLevel = Crazy_Boss_Level.GetBossLevel(Crazy_GlobalData.cur_level);
 			Crazy_Boss_Data nextBossData = bossLevel.GetNextBossData();
 			CreateBoss(nextBossData, cmc);
 			return;
 		}
-		case 4:
+		case Crazy_MonsterType.Ranged:
 			if (Crazy_Data.CurData().GetRanged() && Crazy_EnemyManagement.AddRangedEnemyNumber())
 			{
 				crazy_Monster_Template = Crazy_Monster_Template_Manager.GetMonsterTemplate(ranged[Random.Range(0, ranged.Count)]);

@@ -235,7 +235,6 @@ public class NetworkManager : MonoBehaviour
 
 	public bool IsAllRoomUserInGame()
 	{
-		//Discarded unreachable code: IL_0089, IL_009f
 		try
 		{
 			if (TNetManager.Connection == null || TNetManager.Connection.CurRoom == null)
@@ -721,7 +720,6 @@ public class NetworkManager : MonoBehaviour
 
 	public int GetPlayerPosition()
 	{
-		//Discarded unreachable code: IL_007f
 		try
 		{
 			if (TNetManager.Connection != null && TNetManager.Connection.CurRoom != null)

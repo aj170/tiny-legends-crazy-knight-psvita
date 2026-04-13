@@ -1,15 +1,10 @@
-using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using TNetSdk;
 using UnityEngine;
 
 public class Crazy_Global_Net
 {
 	protected static int innermonsterid;
-
-	[CompilerGenerated]
-	private static Comparison<TNetUser> _003C_003Ef__am_0024cache1;
 
 	public static bool IsRoomHost(TNetRoom room, int usid)
 	{
@@ -36,11 +31,7 @@ public class Crazy_Global_Net
 				list.Add(item);
 			}
 		}
-		if (_003C_003Ef__am_0024cache1 == null)
-		{
-			_003C_003Ef__am_0024cache1 = _003CRoomAliveUserAsc_003Em__10;
-		}
-		list.Sort(_003C_003Ef__am_0024cache1);
+		list.Sort((TNetUser a, TNetUser b) => a.Id.CompareTo(b.Id));
 		return list;
 	}
 
@@ -53,11 +44,5 @@ public class Crazy_Global_Net
 	{
 		innermonsterid++;
 		return innermonsterid;
-	}
-
-	[CompilerGenerated]
-	private static int _003CRoomAliveUserAsc_003Em__10(TNetUser a, TNetUser b)
-	{
-		return a.Id.CompareTo(b.Id);
 	}
 }

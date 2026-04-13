@@ -2,39 +2,39 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!1001 &100100000
 Prefab:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1461388361699201}
+  m_RootGameObject: {fileID: 1428550111211869}
   m_IsPrefabParent: 1
---- !u!1 &1461388361699201
+--- !u!1 &1428550111211869
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4973119412447863}
-  - component: {fileID: 82412036246025619}
-  - component: {fileID: 114446929575479595}
-  - component: {fileID: 114299194466161473}
+  - component: {fileID: 4556404267657784}
+  - component: {fileID: 82527580653680687}
+  - component: {fileID: 114582846619878579}
+  - component: {fileID: 114488691957785196}
   m_Layer: 0
-  m_Name: ani_bowhit_wood01
+  m_Name: Ani_BowHit_Wood01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4973119412447863
+--- !u!4 &4556404267657784
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1461388361699201}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1428550111211869}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -42,12 +42,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &82412036246025619
+--- !u!82 &82527580653680687
 AudioSource:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1461388361699201}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1428550111211869}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -128,35 +128,35 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &114299194466161473
+--- !u!114 &114488691957785196
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1461388361699201}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1428550111211869}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f1520e390f13ad4bb40009d3a0dedcf, type: 3}
+  m_Script: {fileID: 11500000, guid: 64a37e59c578bc44061723623ff7d0f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxCount: 2
   deltaTime: 0.1
---- !u!114 &114446929575479595
+--- !u!114 &114582846619878579
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1461388361699201}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1428550111211869}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30dd24c2edf8f5c4cbba960ea7b16ffd, type: 3}
+  m_Script: {fileID: 11500000, guid: e3582d1c7d4196262b5c70e29e7c0f4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isSfx: 1
   audioClips:
-  - {fileID: 8300000, guid: 29711341c42311b44964befaa8594e3c, type: 3}
-  - {fileID: 8300000, guid: ceefac82367f28d4fbc8bcaf77de8b46, type: 3}
-  - {fileID: 8300000, guid: b40cc70787ab07946bbafcb15d91eb61, type: 3}
+  - {fileID: 8300000, guid: cb00eb8891ae48a4e9bf05a81cb09a70, type: 3}
+  - {fileID: 8300000, guid: 3a88e438ba61e1048aefbd34956d3a9b, type: 3}
+  - {fileID: 8300000, guid: 5481292e2cd65aa45b2de4f87d782cfa, type: 3}
   probability: []
   volumOffset: 0.1
   pitchOffset: 0

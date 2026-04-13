@@ -1,2 +1,4 @@
 # Tiny-Legends-Crazy-Knight
-game by triniti interactive
+PSVita port
+save mechanic is broken on vita
+in game quit option is broken on vita

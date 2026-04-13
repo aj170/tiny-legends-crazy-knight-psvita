@@ -5,9 +5,9 @@ Fixed:
 Multiple crashes
 
 Added:
-Vita Input
+Vita Input,
 Upscale Textures
 
 Still broken (dont know how to fix):
-Saving or loading
+Saving or loading,
 Quit button when paused

@@ -1,4 +1,13 @@
 # Tiny-Legends-Crazy-Knight
 PSVita port
-save mechanic is broken on vita
-in game quit option is broken on vita
+
+Fixed:
+Multiple crashes
+
+Added:
+Vita Input
+Upscale Textures
+
+Still broken (dont know how to fix):
+Saving or loading
+Quit button when paused

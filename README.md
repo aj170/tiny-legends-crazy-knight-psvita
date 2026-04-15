@@ -1,9 +1,13 @@
 # Tiny-Legends-Crazy-Knight
 PSVita port (based on Zweronz decomp)
 
-source project has been moved here: https://github.com/AJ170/TLCK-PSV
+Instructions:
+1) Install "CrazyKnight_v002_Loader.vpk" to your PSVita
+2) download "xdelta-patch.zip"
+3) run ApplyPatch.bat
+4) unzip the newly created Media.zip
+5) copy the "Media" folder you extracted to ux0:\app\TLCK42069
 
-i cant figure out how to upload files, github desktop keeps trying to download files i deleted.
 
 Fixed:
 - Lots of crashes
